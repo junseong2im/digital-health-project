@@ -1,0 +1,51 @@
+{
+  "fold_baseline_auc": [
+    0.7831159889155318,
+    0.7655860404372338,
+    0.7738249330949792
+  ],
+  "blocks": {
+    "sedentary_hours": {
+      "mean_auc_drop": 0.00041206998259727773,
+      "sd_across_folds_and_permutations": 0.0013059656453136945,
+      "repeats": 30
+    },
+    "walking_days": {
+      "mean_auc_drop": -0.0007276619369397349,
+      "sd_across_folds_and_permutations": 0.0010378634279718875,
+      "repeats": 30
+    },
+    "stress_level": {
+      "mean_auc_drop": -0.00033319133830229665,
+      "sd_across_folds_and_permutations": 0.0008906163709360179,
+      "repeats": 30
+    },
+    "employed": {
+      "mean_auc_drop": 0.00040318467925492727,
+      "sd_across_folds_and_permutations": 0.0010838158271312972,
+      "repeats": 30
+    },
+    "strength_days": {
+      "mean_auc_drop": 0.002343667924192209,
+      "sd_across_folds_and_permutations": 0.0018133001375894302,
+      "repeats": 30
+    },
+    "family_history": {
+      "mean_auc_drop": -0.00019995457262119709,
+      "sd_across_folds_and_permutations": 0.0017349127612705918,
+      "repeats": 30
+    },
+    "living_alone": {
+      "mean_auc_drop": 7.704183118362924e-05,
+      "sd_across_folds_and_permutations": 0.0008593989984507652,
+      "repeats": 30
+    },
+    "alcohol_detail": {
+      "mean_auc_drop": 0.0029702719166685284,
+      "sd_across_folds_and_permutations": 0.0026248502138995294,
+      "repeats": 30
+    }
+  },
+  "method": "Frozen seed42 expanded-multitask fold models; 10 permutations each fold; alcohol details shuffled within monthly-drinking strata; no test-based feature selection",
+  "caution": "Permutation importance is not a causal effect. Negative or tiny changes do not establish harmful/protective effects."
+}

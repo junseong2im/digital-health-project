@@ -1,0 +1,15 @@
+{
+  "scope": "Warm CPU one thread, input validation + one shared preprocessing pass + 5 output probabilities + count + JSON; no loading/HTTP",
+  "results": {
+    "NN": {
+      "p50_ms": 0.0642,
+      "p95_ms": 0.10621499999999999,
+      "repeats": 1000
+    },
+    "LR5": {
+      "p50_ms": 0.0483,
+      "p95_ms": 0.0797,
+      "repeats": 1000
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "primary_cohort": "Original unaware cohort, >=12h fasting, complete targets; unchanged",
+  "partitions": "Recover exact original split_manifest; 2024 has already been inspected in prior work",
+  "status": "Exploratory extension on reused temporal holdout, not a new external validation",
+  "household": "cfam 1 = single_person; 2-6 = multi_person (6 top coded); 9/missing = unknown; genertn cross-check only",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 250,
+  "patience": 25,
+  "comparators": [
+    "logistic_regression",
+    "random_forest",
+    "xgboost",
+    "lightgbm",
+    "parallel_nn"
+  ],
+  "calibration": "2023 calibration subset only; temperature for all models",
+  "thresholds": [
+    "2023 threshold-set Youden J",
+    "2023 threshold-set sensitivity >=0.90"
+  ],
+  "comparison": "same train rows, imputation/scaling, temporal partitions and survey weights",
+  "household_ablation": "base vs additional living_alone one-hot; three paired seeds, no best-seed selection",
+  "subgroups": [
+    "sex",
+    "age_19_29_vs_30_39",
+    "sex_cross_age",
+    "household",
+    "household_cross_sex_cross_age"
+  ],
+  "specialist_models": "one seed42 NN per household/age subset if all partitions have >=10 per outcome and training n>=100",
+  "inference": "exploratory unweighted complete-case logit, PSU-cluster SE, age/smoking and living/smoking interactions",
+  "ci": "300 paired resamples of eligible PSUs inside year-strata; exploratory domain approximation",
+  "promotion": "no automatic replacement of original model based on this reused holdout"
+}

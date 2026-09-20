@@ -1,0 +1,31 @@
+{
+  "scope": "Same synthetic state, warm CPU one thread, identical validation/features/binary JSON contract; startup/HTTP excluded",
+  "device": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "common": {
+    "v1_fast": {
+      "p50_ms": 0.0487,
+      "p95_ms": 0.08111999999999998,
+      "repeats": 1000
+    },
+    "v2_fast": {
+      "p50_ms": 0.0273,
+      "p95_ms": 0.0445,
+      "repeats": 1000
+    },
+    "v3_specialized": {
+      "p50_ms": 0.0292,
+      "p95_ms": 0.04831999999999998,
+      "repeats": 1000
+    },
+    "v3_tuned_lr": {
+      "p50_ms": 0.024,
+      "p95_ms": 0.04030999999999999,
+      "repeats": 1000
+    }
+  },
+  "v3_full_choice_score_noul": {
+    "p50_ms": 0.0875,
+    "p95_ms": 0.136205,
+    "repeats": 1000
+  }
+}

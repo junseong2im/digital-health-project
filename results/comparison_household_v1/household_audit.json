@@ -1,0 +1,30 @@
+{
+  "definition": "cfam 1 = single_person; 2-6 = multi_person (6 top coded); 9/missing = unknown; genertn cross-check only",
+  "by_year": {
+    "2021": {
+      "young_n": 1414,
+      "single": 195,
+      "unknown": 1,
+      "cfam_genertn_conflict": 0
+    },
+    "2022": {
+      "young_n": 1284,
+      "single": 193,
+      "unknown": 0,
+      "cfam_genertn_conflict": 0
+    },
+    "2023": {
+      "young_n": 1290,
+      "single": 172,
+      "unknown": 0,
+      "cfam_genertn_conflict": 0
+    },
+    "2024": {
+      "young_n": 1353,
+      "single": 251,
+      "unknown": 0,
+      "cfam_genertn_conflict": 0
+    }
+  },
+  "cohort_conflicts": 0
+}

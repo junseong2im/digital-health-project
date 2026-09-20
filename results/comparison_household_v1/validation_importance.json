@@ -1,0 +1,86 @@
+{
+  "n": 372,
+  "baseline_auc": 0.7846459200756807,
+  "importance": {
+    "age": {
+      "mean_auc_drop": 0.014739687298597249,
+      "sd": 0.00986679820086629,
+      "columns": [
+        "age"
+      ]
+    },
+    "HE_BMI": {
+      "mean_auc_drop": 0.002585474774843416,
+      "sd": 0.00554918808152061,
+      "columns": [
+        "HE_BMI"
+      ]
+    },
+    "HE_wc": {
+      "mean_auc_drop": 0.07046262850556466,
+      "sd": 0.02234834065435402,
+      "columns": [
+        "HE_wc"
+      ]
+    },
+    "WHtR": {
+      "mean_auc_drop": 0.07414991814515923,
+      "sd": 0.02507268581177189,
+      "columns": [
+        "WHtR"
+      ]
+    },
+    "sex": {
+      "mean_auc_drop": 0.007959286739185185,
+      "sd": 0.0036818616305888574,
+      "columns": [
+        "sex"
+      ]
+    },
+    "incm": {
+      "mean_auc_drop": 0.007115777787447719,
+      "sd": 0.005439483761943989,
+      "columns": [
+        "incm"
+      ]
+    },
+    "edu": {
+      "mean_auc_drop": 0.0011584627869919261,
+      "sd": 0.00239120866476886,
+      "columns": [
+        "edu"
+      ]
+    },
+    "sm_presnt": {
+      "mean_auc_drop": 0.001556907134269797,
+      "sd": 0.005179318246167224,
+      "columns": [
+        "sm_presnt"
+      ]
+    },
+    "dr_month": {
+      "mean_auc_drop": 0.004117499044537792,
+      "sd": 0.0023744453066562284,
+      "columns": [
+        "dr_month"
+      ]
+    },
+    "pa_aerobic": {
+      "mean_auc_drop": 0.001847114325526983,
+      "sd": 0.0041825441371452455,
+      "columns": [
+        "pa_aerobic"
+      ]
+    },
+    "anthropometry_joint": {
+      "mean_auc_drop": 0.24464030324944405,
+      "sd": 0.031273657309578644,
+      "columns": [
+        "HE_BMI",
+        "HE_wc",
+        "WHtR"
+      ]
+    }
+  },
+  "note": "Validation-set permutation only; correlated anthropometry may mask individual contributions; not causal effects."
+}

@@ -1,0 +1,82 @@
+{
+  "name": "primary_risk_optimization_v2",
+  "cohort": "Same 4068 eligible participants; no data removed based on outcomes or test metrics",
+  "selection": "Only 2021-2022, stratified group 3-fold CV by year-PSU; fold-internal early stopping; refit outer train before evaluation",
+  "calibration": "Original 2023 calibration subset; primary and conditional temperatures independently fit",
+  "threshold": "Original 2023 threshold subset, Youden and sensitivity90",
+  "test": "Original already-inspected 2024; exploratory final evaluation, never used for selection",
+  "preprocessing": "Train-only medians, means/scales, optional hinge quartiles; explicit missing indicators and categorical missing levels",
+  "objective": "Primary binary BCE + 0.10 conditional positive-pattern CE; one-pass coherent joint output",
+  "grid_nn": [
+    {
+      "basis": "standard",
+      "hidden": 8,
+      "seed": 42,
+      "weight_decay": 0.01
+    },
+    {
+      "basis": "standard",
+      "hidden": 16,
+      "seed": 42,
+      "weight_decay": 0.01
+    },
+    {
+      "basis": "standard",
+      "hidden": 32,
+      "seed": 42,
+      "weight_decay": 0.01
+    },
+    {
+      "basis": "hinge",
+      "hidden": 8,
+      "seed": 42,
+      "weight_decay": 0.01
+    },
+    {
+      "basis": "hinge",
+      "hidden": 16,
+      "seed": 42,
+      "weight_decay": 0.01
+    },
+    {
+      "basis": "hinge",
+      "hidden": 32,
+      "seed": 42,
+      "weight_decay": 0.01
+    }
+  ],
+  "grid_lr": [
+    {
+      "basis": "standard",
+      "C": 0.1
+    },
+    {
+      "basis": "standard",
+      "C": 1
+    },
+    {
+      "basis": "standard",
+      "C": 10
+    },
+    {
+      "basis": "hinge",
+      "C": 0.1
+    },
+    {
+      "basis": "hinge",
+      "C": 1
+    },
+    {
+      "basis": "hinge",
+      "C": 10
+    }
+  ],
+  "selection_metric": "Mean fold survey-weighted ROC-AUC (Brier as tie-break); no test-based seed or winner selection",
+  "training": {
+    "lr": 0.003,
+    "max_epochs": 180,
+    "patience": 20,
+    "batch": "full train batch"
+  },
+  "latency": "Benchmark optimized NN and optimized LR through identical validation/feature/output paths; also preserve old runtime comparison"
+}

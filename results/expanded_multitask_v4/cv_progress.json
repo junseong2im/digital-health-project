@@ -1,0 +1,402 @@
+{
+  "base_LR5": [
+    {
+      "C": 0.03,
+      "endpoint_oof_auc": [
+        0.774847051361196,
+        0.7910448157355257,
+        0.7406196705307292,
+        0.800014233579881,
+        0.7478780775524962
+      ]
+    },
+    {
+      "C": 0.1,
+      "endpoint_oof_auc": [
+        0.7737172173414425,
+        0.7884956989085968,
+        0.7408473626886412,
+        0.8001976460057045,
+        0.7500918835606118
+      ]
+    },
+    {
+      "C": 0.3,
+      "endpoint_oof_auc": [
+        0.7725396358707843,
+        0.7857023327125982,
+        0.73870708747592,
+        0.7991798377673516,
+        0.7486510971614243
+      ]
+    }
+  ],
+  "base_single_s42": {
+    "fold_auc": [
+      0.784122579422697,
+      0.7711293277645601,
+      0.772164549039673
+    ],
+    "mean_auc": 0.7758054854089766,
+    "best_epochs": [
+      2,
+      3,
+      1
+    ],
+    "config": {
+      "name": "base_single_s42",
+      "expanded": false,
+      "multitask": false,
+      "seed": 42,
+      "temperature": 1.0169962385720532,
+      "pattern_temperature": 1.0,
+      "thresholds": {
+        "youden": 0.34212650674943623,
+        "sensitivity90": 0.1734741955488408
+      },
+      "epochs": 2,
+      "train_n": 3062,
+      "parameters": 233
+    }
+  },
+  "base_single_s43": {
+    "fold_auc": [
+      0.781712567594508,
+      0.7696970081744334,
+      0.7721499172391948
+    ],
+    "mean_auc": 0.774519831002712,
+    "best_epochs": [
+      28,
+      29,
+      1
+    ],
+    "config": {
+      "name": "base_single_s43",
+      "expanded": false,
+      "multitask": false,
+      "seed": 43,
+      "temperature": 1.0367557416110178,
+      "pattern_temperature": 1.0,
+      "thresholds": {
+        "youden": 0.4028180624506606,
+        "sensitivity90": 0.17561961552329095
+      },
+      "epochs": 28,
+      "train_n": 3062,
+      "parameters": 233
+    }
+  },
+  "base_single_s44": {
+    "fold_auc": [
+      0.7839290562572994,
+      0.770506393327272,
+      0.7721759331992346
+    ],
+    "mean_auc": 0.775537127594602,
+    "best_epochs": [
+      2,
+      22,
+      1
+    ],
+    "config": {
+      "name": "base_single_s44",
+      "expanded": false,
+      "multitask": false,
+      "seed": 44,
+      "temperature": 1.0225928062250245,
+      "pattern_temperature": 1.0,
+      "thresholds": {
+        "youden": 0.3405848872434426,
+        "sensitivity90": 0.17582804631898827
+      },
+      "epochs": 2,
+      "train_n": 3062,
+      "parameters": 233
+    }
+  },
+  "base_multi_s42": {
+    "fold_auc": [
+      0.7839091577456938,
+      0.7712364346856968,
+      0.7721368716616491
+    ],
+    "mean_auc": 0.7757608213643467,
+    "best_epochs": [
+      4,
+      4,
+      3
+    ],
+    "config": {
+      "name": "base_multi_s42",
+      "expanded": false,
+      "multitask": true,
+      "seed": 42,
+      "temperature": 1.016770602806078,
+      "pattern_temperature": 1.2159431729402377,
+      "thresholds": {
+        "youden": 0.33028155893574274,
+        "sensitivity90": 0.17221363930555256
+      },
+      "epochs": 4,
+      "train_n": 3062,
+      "parameters": 477
+    }
+  },
+  "base_multi_s43": {
+    "fold_auc": [
+      0.7821170496195553,
+      0.7699646104936282,
+      0.772045435735895
+    ],
+    "mean_auc": 0.7747090319496929,
+    "best_epochs": [
+      26,
+      32,
+      3
+    ],
+    "config": {
+      "name": "base_multi_s43",
+      "expanded": false,
+      "multitask": true,
+      "seed": 43,
+      "temperature": 1.0342711801571631,
+      "pattern_temperature": 1.176387937210291,
+      "thresholds": {
+        "youden": 0.4031417805938169,
+        "sensitivity90": 0.17440196731926833
+      },
+      "epochs": 26,
+      "train_n": 3062,
+      "parameters": 477
+    }
+  },
+  "base_multi_s44": {
+    "fold_auc": [
+      0.7838565370411374,
+      0.7706195957560865,
+      0.7720494105722222
+    ],
+    "mean_auc": 0.7755085144564822,
+    "best_epochs": [
+      3,
+      25,
+      3
+    ],
+    "config": {
+      "name": "base_multi_s44",
+      "expanded": false,
+      "multitask": true,
+      "seed": 44,
+      "temperature": 1.0206210029585476,
+      "pattern_temperature": 1.1918147960676218,
+      "thresholds": {
+        "youden": 0.33031262462897715,
+        "sensitivity90": 0.17550627578716924
+      },
+      "epochs": 3,
+      "train_n": 3062,
+      "parameters": 477
+    }
+  },
+  "expanded_LR5": [
+    {
+      "C": 0.03,
+      "endpoint_oof_auc": [
+        0.7741834971948753,
+        0.7931233159929401,
+        0.7569105952142097,
+        0.7998241810998947,
+        0.7555804097021823
+      ]
+    },
+    {
+      "C": 0.1,
+      "endpoint_oof_auc": [
+        0.7717063274951311,
+        0.7904726970310496,
+        0.7581560978232234,
+        0.796792441284204,
+        0.7566793395409634
+      ]
+    },
+    {
+      "C": 0.3,
+      "endpoint_oof_auc": [
+        0.7697971852460621,
+        0.7872719515092176,
+        0.7556742956970621,
+        0.7926634197671711,
+        0.754439815277707
+      ]
+    }
+  ],
+  "expanded_single_s42": {
+    "fold_auc": [
+      0.7832116533591372,
+      0.7649532429258119,
+      0.7737969178851779
+    ],
+    "mean_auc": 0.7739872713900424,
+    "best_epochs": [
+      1,
+      32,
+      1
+    ],
+    "config": {
+      "name": "expanded_single_s42",
+      "expanded": true,
+      "multitask": false,
+      "seed": 42,
+      "temperature": 1.087270682935938,
+      "pattern_temperature": 1.0,
+      "thresholds": {
+        "youden": 0.38116996247497537,
+        "sensitivity90": 0.1903226284492495
+      },
+      "epochs": 1,
+      "train_n": 3062,
+      "parameters": 393
+    }
+  },
+  "expanded_single_s43": {
+    "fold_auc": [
+      0.7831969101910418,
+      0.7644935233358763,
+      0.773886134090242
+    ],
+    "mean_auc": 0.7738588558723868,
+    "best_epochs": [
+      1,
+      41,
+      1
+    ],
+    "config": {
+      "name": "expanded_single_s43",
+      "expanded": true,
+      "multitask": false,
+      "seed": 43,
+      "temperature": 1.0920329870972758,
+      "pattern_temperature": 1.0,
+      "thresholds": {
+        "youden": 0.38076425675252873,
+        "sensitivity90": 0.19186072659050912
+      },
+      "epochs": 1,
+      "train_n": 3062,
+      "parameters": 393
+    }
+  },
+  "expanded_single_s44": {
+    "fold_auc": [
+      0.7831982550202605,
+      0.7673123737986804,
+      0.7739207929217975
+    ],
+    "mean_auc": 0.7748104739135795,
+    "best_epochs": [
+      1,
+      1,
+      1
+    ],
+    "config": {
+      "name": "expanded_single_s44",
+      "expanded": true,
+      "multitask": false,
+      "seed": 44,
+      "temperature": 1.0730199925413473,
+      "pattern_temperature": 1.0,
+      "thresholds": {
+        "youden": 0.38905410259928486,
+        "sensitivity90": 0.1868395594369197
+      },
+      "epochs": 1,
+      "train_n": 3062,
+      "parameters": 393
+    }
+  },
+  "expanded_multi_s42": {
+    "fold_auc": [
+      0.7831159889155318,
+      0.7655860404372338,
+      0.7738249330949792
+    ],
+    "mean_auc": 0.7741756541492483,
+    "best_epochs": [
+      2,
+      28,
+      2
+    ],
+    "config": {
+      "name": "expanded_multi_s42",
+      "expanded": true,
+      "multitask": true,
+      "seed": 42,
+      "temperature": 1.0826937679587165,
+      "pattern_temperature": 1.2324250691151746,
+      "thresholds": {
+        "youden": 0.38037371183136703,
+        "sensitivity90": 0.18761932012643268
+      },
+      "epochs": 2,
+      "train_n": 3062,
+      "parameters": 765
+    }
+  },
+  "expanded_multi_s43": {
+    "fold_auc": [
+      0.7832307850824741,
+      0.7646870090118116,
+      0.7737335153817669
+    ],
+    "mean_auc": 0.773883769825351,
+    "best_epochs": [
+      1,
+      43,
+      2
+    ],
+    "config": {
+      "name": "expanded_multi_s43",
+      "expanded": true,
+      "multitask": true,
+      "seed": 43,
+      "temperature": 1.090067405748188,
+      "pattern_temperature": 1.256882160687326,
+      "thresholds": {
+        "youden": 0.3875344475747754,
+        "sensitivity90": 0.18824390250213655
+      },
+      "epochs": 2,
+      "train_n": 3062,
+      "parameters": 765
+    }
+  },
+  "expanded_multi_s44": {
+    "fold_auc": [
+      0.783010470109438,
+      0.7649617633004338,
+      0.7737419175108456
+    ],
+    "mean_auc": 0.7739047169735724,
+    "best_epochs": [
+      2,
+      42,
+      2
+    ],
+    "config": {
+      "name": "expanded_multi_s44",
+      "expanded": true,
+      "multitask": true,
+      "seed": 44,
+      "temperature": 1.0892292478641157,
+      "pattern_temperature": 1.2447947216071762,
+      "thresholds": {
+        "youden": 0.39566037554733696,
+        "sensitivity90": 0.18974762733961043
+      },
+      "epochs": 2,
+      "train_n": 3062,
+      "parameters": 765
+    }
+  }
+}

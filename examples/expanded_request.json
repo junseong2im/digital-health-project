@@ -1,0 +1,21 @@
+{
+  "age": 29,
+  "sex": 1,
+  "HE_BMI": 25.0,
+  "HE_wc": 87.0,
+  "HE_ht": 175.0,
+  "incm": 2,
+  "edu": 4,
+  "sm_presnt": 0,
+  "dr_month": 1,
+  "pa_aerobic": 1,
+  "sedentary_hours": 8.5,
+  "walking_days": 4,
+  "stress_level": 2,
+  "employed": 1,
+  "alcohol_frequency": 3,
+  "alcohol_amount": 2,
+  "strength_days": 2,
+  "family_history": 1,
+  "living_alone": 1
+}

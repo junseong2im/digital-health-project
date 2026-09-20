@@ -1,0 +1,97 @@
+{
+  "development_years": [
+    2021,
+    2022,
+    2023
+  ],
+  "test_year": 2024,
+  "status": "Reused 2024 exploratory temporal evaluation; never used for this architecture selection",
+  "cohort": "Existing complete-lab, no-diagnosis, no-medication, >=12h fasting cohort",
+  "grid": [
+    {
+      "mode": "flat",
+      "hidden": 8,
+      "pairwise": true,
+      "aux": 0.2
+    },
+    {
+      "mode": "grouped",
+      "hidden": 4,
+      "pairwise": true,
+      "aux": 0.2
+    },
+    {
+      "mode": "grouped",
+      "hidden": 8,
+      "pairwise": true,
+      "aux": 0.2
+    },
+    {
+      "mode": "grouped",
+      "hidden": 4,
+      "pairwise": false,
+      "aux": 0.2
+    },
+    {
+      "mode": "grouped",
+      "hidden": 4,
+      "pairwise": true,
+      "aux": 0.0
+    },
+    {
+      "mode": "grouped",
+      "hidden": 4,
+      "pairwise": true,
+      "aux": 0.5
+    }
+  ],
+  "basis": "hinge",
+  "primary_initialization": "Weighted C=0.1 logistic, same development rows; hybrid neural initialization is disclosed",
+  "component_initialization": "Four weighted C=0.1 single-finding logistic models, training rows only",
+  "nn_selection": "Mean 3-fold group ROC-AUC, then Brier, then parameter count; all candidates reported",
+  "early_stop": "Fold-internal PSU-group 20% split, primary BCE + 0.1 component BCE; refit outer training fold at selected epoch",
+  "loss": "Weighted primary BCE + aux * mean component BCE + 0.05 positive conditional NLL + primary-skip anchor",
+  "max_epochs": 220,
+  "patience": 25,
+  "seed": 42,
+  "calibration": "Selected out-of-fold logits split by PSU into 60% calibration and 40% threshold roles; no in-sample final-model predictions used",
+  "lr_grid": [
+    {
+      "basis": "standard",
+      "C": 0.03
+    },
+    {
+      "basis": "standard",
+      "C": 0.1
+    },
+    {
+      "basis": "standard",
+      "C": 0.3
+    },
+    {
+      "basis": "standard",
+      "C": 1.0
+    },
+    {
+      "basis": "hinge",
+      "C": 0.03
+    },
+    {
+      "basis": "hinge",
+      "C": 0.1
+    },
+    {
+      "basis": "hinge",
+      "C": 0.3
+    },
+    {
+      "basis": "hinge",
+      "C": 1.0
+    }
+  ],
+  "limitations": [
+    "Selection and calibration reuse development outcomes; internal estimates are not unbiased external validation.",
+    "OOF models train on two thirds of development; calibration transfers to a full refit and is not guaranteed.",
+    "Interaction paths encode modeling hypotheses, not known causal biological mechanisms."
+  ]
+}

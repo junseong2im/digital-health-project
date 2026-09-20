@@ -1,0 +1,67 @@
+{
+  "n": 4068,
+  "duplicates": 0,
+  "pregnancy_codes": {
+    "0.0": 2274,
+    "8.0": 1794
+  },
+  "features": {
+    "age": {
+      "missing": 0,
+      "minimum": 19.0,
+      "maximum": 39.0
+    },
+    "HE_BMI": {
+      "missing": 13,
+      "minimum": 14.140248310957588,
+      "maximum": 48.05490419911598
+    },
+    "HE_wc": {
+      "missing": 78,
+      "minimum": 55.0,
+      "maximum": 139.7
+    },
+    "WHtR": {
+      "missing": 83,
+      "minimum": 0.34285714285714286,
+      "maximum": 0.8103233830845771
+    },
+    "sex": {
+      "missing": 0,
+      "minimum": 1.0,
+      "maximum": 2.0
+    },
+    "incm": {
+      "missing": 5,
+      "minimum": 1.0,
+      "maximum": 4.0
+    },
+    "edu": {
+      "missing": 34,
+      "minimum": 1.0,
+      "maximum": 4.0
+    },
+    "sm_presnt": {
+      "missing": 15,
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "dr_month": {
+      "missing": 15,
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "pa_aerobic": {
+      "missing": 144,
+      "minimum": 0.0,
+      "maximum": 1.0
+    }
+  },
+  "year_counts": {
+    "2021": 1039,
+    "2022": 1013,
+    "2023": 1010,
+    "2024": 1006
+  },
+  "note": "No invalid categories or duplicate participants observed. Numeric predictors within API measurement ranges. True extreme laboratory targets retained; no test-derived clipping."
+}

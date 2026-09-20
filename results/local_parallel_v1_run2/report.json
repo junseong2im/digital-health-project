@@ -1,0 +1,1149 @@
+{
+  "cohort_flow": {
+    "2021": {
+      "all": 7090,
+      "age_19_39": 1414,
+      "known_diagnosis_status": 1321,
+      "no_prior_diagnosis": 1269,
+      "no_medication": 1269,
+      "not_recorded_pregnant": 1258,
+      "fasting": 1061,
+      "complete_target": 1039,
+      "valid_survey_design": 1039
+    },
+    "2022": {
+      "all": 6265,
+      "age_19_39": 1284,
+      "known_diagnosis_status": 1284,
+      "no_prior_diagnosis": 1229,
+      "no_medication": 1229,
+      "not_recorded_pregnant": 1212,
+      "fasting": 1035,
+      "complete_target": 1013,
+      "valid_survey_design": 1013
+    },
+    "2023": {
+      "all": 6929,
+      "age_19_39": 1290,
+      "known_diagnosis_status": 1290,
+      "no_prior_diagnosis": 1237,
+      "no_medication": 1237,
+      "not_recorded_pregnant": 1220,
+      "fasting": 1027,
+      "complete_target": 1010,
+      "valid_survey_design": 1010
+    },
+    "2024": {
+      "all": 6997,
+      "age_19_39": 1353,
+      "known_diagnosis_status": 1353,
+      "no_prior_diagnosis": 1280,
+      "no_medication": 1280,
+      "not_recorded_pregnant": 1267,
+      "fasting": 1011,
+      "complete_target": 1006,
+      "valid_survey_design": 1006
+    }
+  },
+  "partitions": {
+    "train": {
+      "n": 1680,
+      "positive": 645,
+      "psus": 278,
+      "years": [
+        2021,
+        2022
+      ]
+    },
+    "validation": {
+      "n": 372,
+      "positive": 126,
+      "psus": 70,
+      "years": [
+        2021,
+        2022
+      ]
+    },
+    "calibration": {
+      "n": 481,
+      "positive": 177,
+      "psus": 89,
+      "years": [
+        2023
+      ]
+    },
+    "threshold": {
+      "n": 529,
+      "positive": 181,
+      "psus": 89,
+      "years": [
+        2023
+      ]
+    },
+    "test_2024": {
+      "n": 1006,
+      "positive": 343,
+      "psus": 173,
+      "years": [
+        2024
+      ]
+    }
+  },
+  "models": {
+    "parallel_nn": {
+      "validation": {
+        "n": 372,
+        "prevalence": 0.3534822346602056,
+        "roc_auc": 0.7846459204847397,
+        "pr_auc_ap": 0.6607650261546139,
+        "brier": 0.1772634447676823,
+        "log_loss": 0.5303792604750547,
+        "ece_10_bins": 0.03570892323041124,
+        "sensitivity": 0.929674942588964,
+        "specificity": 0.35931002164542214,
+        "ppv": 0.44238748703161224,
+        "npv": 0.9033334968710443,
+        "mcc": 0.3160825306279768,
+        "threshold": 0.1441582441329956,
+        "reliability": [
+          {
+            "bin": 0,
+            "n": 38,
+            "predicted": 0.08848832547664642,
+            "observed": 0.05396545603552958
+          },
+          {
+            "bin": 1,
+            "n": 113,
+            "predicted": 0.14648576080799103,
+            "observed": 0.16230084698320427
+          },
+          {
+            "bin": 2,
+            "n": 53,
+            "predicted": 0.2499634176492691,
+            "observed": 0.27601266765676974
+          },
+          {
+            "bin": 3,
+            "n": 36,
+            "predicted": 0.35037973523139954,
+            "observed": 0.44504140625593486
+          },
+          {
+            "bin": 4,
+            "n": 36,
+            "predicted": 0.45433202385902405,
+            "observed": 0.4412408228735949
+          },
+          {
+            "bin": 5,
+            "n": 23,
+            "predicted": 0.5434746742248535,
+            "observed": 0.5086220555714883
+          },
+          {
+            "bin": 6,
+            "n": 27,
+            "predicted": 0.6488480567932129,
+            "observed": 0.6960835949170111
+          },
+          {
+            "bin": 7,
+            "n": 32,
+            "predicted": 0.7552302479743958,
+            "observed": 0.6728999556537862
+          },
+          {
+            "bin": 8,
+            "n": 14,
+            "predicted": 0.8343663811683655,
+            "observed": 0.838207489458707
+          }
+        ]
+      },
+      "calibration": {
+        "n": 481,
+        "prevalence": 0.3945022309073049,
+        "roc_auc": 0.802771356516127,
+        "pr_auc_ap": 0.7249937776731227,
+        "brier": 0.17637127613051265,
+        "log_loss": 0.5288881503494882,
+        "ece_10_bins": 0.05419249155416827,
+        "sensitivity": 0.9805580290627958,
+        "specificity": 0.38436871099822484,
+        "ppv": 0.5092608198589734,
+        "npv": 0.9680958245167917,
+        "mcc": 0.4173729795740448,
+        "threshold": 0.1441582441329956,
+        "reliability": [
+          {
+            "bin": 0,
+            "n": 49,
+            "predicted": 0.09006673097610474,
+            "observed": 0.052699129545985594
+          },
+          {
+            "bin": 1,
+            "n": 138,
+            "predicted": 0.14279210567474365,
+            "observed": 0.16018161969525443
+          },
+          {
+            "bin": 2,
+            "n": 69,
+            "predicted": 0.2441672384738922,
+            "observed": 0.3836273063781825
+          },
+          {
+            "bin": 3,
+            "n": 44,
+            "predicted": 0.35320553183555603,
+            "observed": 0.3703678302467651
+          },
+          {
+            "bin": 4,
+            "n": 39,
+            "predicted": 0.4435303807258606,
+            "observed": 0.32123350600403633
+          },
+          {
+            "bin": 5,
+            "n": 41,
+            "predicted": 0.5497192144393921,
+            "observed": 0.5320487438107405
+          },
+          {
+            "bin": 6,
+            "n": 32,
+            "predicted": 0.6617988348007202,
+            "observed": 0.6952751464630956
+          },
+          {
+            "bin": 7,
+            "n": 44,
+            "predicted": 0.7503405213356018,
+            "observed": 0.844002542494448
+          },
+          {
+            "bin": 8,
+            "n": 25,
+            "predicted": 0.8324828743934631,
+            "observed": 0.8783900377871257
+          }
+        ]
+      },
+      "threshold": {
+        "n": 529,
+        "prevalence": 0.35498571884751584,
+        "roc_auc": 0.7598110526933519,
+        "pr_auc_ap": 0.6392987716293015,
+        "brier": 0.1839859362086652,
+        "log_loss": 0.5515818155738883,
+        "ece_10_bins": 0.06426038055020301,
+        "sensitivity": 0.9025370365288851,
+        "specificity": 0.31806719025818064,
+        "ppv": 0.42142745140747967,
+        "npv": 0.8556950265928266,
+        "mcc": 0.24725369559335866,
+        "threshold": 0.1441582441329956,
+        "reliability": [
+          {
+            "bin": 0,
+            "n": 44,
+            "predicted": 0.088449627161026,
+            "observed": 0.11610028755220368
+          },
+          {
+            "bin": 1,
+            "n": 148,
+            "predicted": 0.1403115838766098,
+            "observed": 0.17793445541762382
+          },
+          {
+            "bin": 2,
+            "n": 81,
+            "predicted": 0.2405441701412201,
+            "observed": 0.17019119093128204
+          },
+          {
+            "bin": 3,
+            "n": 48,
+            "predicted": 0.34364384412765503,
+            "observed": 0.23922712577861246
+          },
+          {
+            "bin": 4,
+            "n": 48,
+            "predicted": 0.4477401077747345,
+            "observed": 0.5349031319199485
+          },
+          {
+            "bin": 5,
+            "n": 45,
+            "predicted": 0.5482935309410095,
+            "observed": 0.46392964311988855
+          },
+          {
+            "bin": 6,
+            "n": 36,
+            "predicted": 0.6510359048843384,
+            "observed": 0.6096937945085054
+          },
+          {
+            "bin": 7,
+            "n": 53,
+            "predicted": 0.7547568678855896,
+            "observed": 0.6355064607664214
+          },
+          {
+            "bin": 8,
+            "n": 26,
+            "predicted": 0.8302879333496094,
+            "observed": 0.8510332515187244
+          }
+        ]
+      },
+      "test_2024": {
+        "n": 1006,
+        "prevalence": 0.3661402503889821,
+        "roc_auc": 0.8321162680105224,
+        "pr_auc_ap": 0.7550299912002795,
+        "brier": 0.15670717351578656,
+        "log_loss": 0.4829710759844521,
+        "ece_10_bins": 0.03173072084903505,
+        "sensitivity": 0.94793776839952,
+        "specificity": 0.3736190510992966,
+        "ppv": 0.46643029441870476,
+        "npv": 0.9255050458757962,
+        "mcc": 0.3550063118795018,
+        "threshold": 0.1441582441329956,
+        "reliability": [
+          {
+            "bin": 0,
+            "n": 104,
+            "predicted": 0.08765200525522232,
+            "observed": 0.06656116603120953
+          },
+          {
+            "bin": 1,
+            "n": 317,
+            "predicted": 0.13925570249557495,
+            "observed": 0.1142037137216584
+          },
+          {
+            "bin": 2,
+            "n": 137,
+            "predicted": 0.24548986554145813,
+            "observed": 0.23719856521598529
+          },
+          {
+            "bin": 3,
+            "n": 102,
+            "predicted": 0.34244078397750854,
+            "observed": 0.3419164731625268
+          },
+          {
+            "bin": 4,
+            "n": 81,
+            "predicted": 0.4487747251987457,
+            "observed": 0.48777077238048866
+          },
+          {
+            "bin": 5,
+            "n": 60,
+            "predicted": 0.5474659204483032,
+            "observed": 0.5808586343480104
+          },
+          {
+            "bin": 6,
+            "n": 84,
+            "predicted": 0.6564949750900269,
+            "observed": 0.6378964715408417
+          },
+          {
+            "bin": 7,
+            "n": 68,
+            "predicted": 0.7511737942695618,
+            "observed": 0.8908452015750051
+          },
+          {
+            "bin": 8,
+            "n": 53,
+            "predicted": 0.8325496315956116,
+            "observed": 0.89271362995454
+          }
+        ]
+      },
+      "test_unweighted": {
+        "n": 1006,
+        "prevalence": 0.34095427435387676,
+        "roc_auc": 0.8323813041700198,
+        "pr_auc_ap": 0.7391807520951859,
+        "brier": 0.15206296033975092,
+        "log_loss": 0.4715083958043261,
+        "ece_10_bins": 0.03068308606299445,
+        "sensitivity": 0.9416909620991254,
+        "specificity": 0.4042232277526395,
+        "ppv": 0.44986072423398327,
+        "npv": 0.9305555555555556,
+        "mcc": 0.36275527457201867,
+        "threshold": 0.1441582441329956,
+        "reliability": [
+          {
+            "bin": 0,
+            "n": 104,
+            "predicted": 0.08733466324897912,
+            "observed": 0.0673076923076923
+          },
+          {
+            "bin": 1,
+            "n": 317,
+            "predicted": 0.1390179506611749,
+            "observed": 0.11041009463722397
+          },
+          {
+            "bin": 2,
+            "n": 137,
+            "predicted": 0.24532807786969374,
+            "observed": 0.23357664233576642
+          },
+          {
+            "bin": 3,
+            "n": 102,
+            "predicted": 0.3421776212897955,
+            "observed": 0.3333333333333333
+          },
+          {
+            "bin": 4,
+            "n": 81,
+            "predicted": 0.45109784603118896,
+            "observed": 0.49382716049382713
+          },
+          {
+            "bin": 5,
+            "n": 60,
+            "predicted": 0.547822634379069,
+            "observed": 0.5666666666666667
+          },
+          {
+            "bin": 6,
+            "n": 84,
+            "predicted": 0.6541676691600254,
+            "observed": 0.6428571428571429
+          },
+          {
+            "bin": 7,
+            "n": 68,
+            "predicted": 0.7514705666724373,
+            "observed": 0.8676470588235294
+          },
+          {
+            "bin": 8,
+            "n": 53,
+            "predicted": 0.834682582684283,
+            "observed": 0.9056603773584906
+          }
+        ]
+      },
+      "test_uncalibrated": {
+        "n": 1006,
+        "prevalence": 0.3661402503889821,
+        "roc_auc": 0.8320586862776089,
+        "pr_auc_ap": 0.7549452215105577,
+        "brier": 0.1573357885919443,
+        "log_loss": 0.48558418531735587,
+        "ece_10_bins": 0.042393909693627135,
+        "sensitivity": 0.96079468911134,
+        "specificity": 0.2801659460184051,
+        "ppv": 0.4353462011337584,
+        "npv": 0.9252130845105143,
+        "mcc": 0.29475514324735913,
+        "threshold": 0.1441582441329956,
+        "reliability": [
+          {
+            "bin": 0,
+            "n": 28,
+            "predicted": 0.09553445130586624,
+            "observed": 0.0
+          },
+          {
+            "bin": 1,
+            "n": 339,
+            "predicted": 0.14606715738773346,
+            "observed": 0.09995567770301854
+          },
+          {
+            "bin": 2,
+            "n": 156,
+            "predicted": 0.2510588765144348,
+            "observed": 0.2395130650195471
+          },
+          {
+            "bin": 3,
+            "n": 110,
+            "predicted": 0.34998708963394165,
+            "observed": 0.3146973658930927
+          },
+          {
+            "bin": 4,
+            "n": 78,
+            "predicted": 0.4489942789077759,
+            "observed": 0.42193431010796684
+          },
+          {
+            "bin": 5,
+            "n": 74,
+            "predicted": 0.5463910102844238,
+            "observed": 0.4618456774790183
+          },
+          {
+            "bin": 6,
+            "n": 74,
+            "predicted": 0.6521357893943787,
+            "observed": 0.6622621893451349
+          },
+          {
+            "bin": 7,
+            "n": 88,
+            "predicted": 0.7466499209403992,
+            "observed": 0.8139892093834151
+          },
+          {
+            "bin": 8,
+            "n": 59,
+            "predicted": 0.8367040157318115,
+            "observed": 0.9032424462472904
+          }
+        ]
+      },
+      "test_ci95_exploratory": {
+        "roc_auc": [
+          0.8048917621656259,
+          0.8586628551691814
+        ],
+        "pr_auc_ap": [
+          0.7021486959770571,
+          0.8009655338703813
+        ],
+        "brier": [
+          0.14565096797952748,
+          0.16913533898589045
+        ],
+        "sensitivity": [
+          0.9258059554983517,
+          0.9693261016784939
+        ],
+        "specificity": [
+          0.3388937857955956,
+          0.40781786310499624
+        ]
+      },
+      "component_test": {
+        "elevated_glucose": {
+          "n": 1006,
+          "prevalence": 0.11046856641769409,
+          "roc_auc": 0.8196825397453009,
+          "pr_auc_ap": 0.37930682189406495,
+          "brier": 0.08302376107534762,
+          "log_loss": 0.28168835475309995,
+          "ece_10_bins": 0.02511884830892086,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "ppv": null,
+          "npv": 0.8895314362020162,
+          "mcc": 0.0,
+          "threshold": 0.5,
+          "reliability": [
+            {
+              "bin": 0,
+              "n": 596,
+              "predicted": 0.042222119867801666,
+              "observed": 0.025692548602819443
+            },
+            {
+              "bin": 1,
+              "n": 164,
+              "predicted": 0.14236174523830414,
+              "observed": 0.09548844397068024
+            },
+            {
+              "bin": 2,
+              "n": 119,
+              "predicted": 0.24914467334747314,
+              "observed": 0.20958301424980164
+            },
+            {
+              "bin": 3,
+              "n": 81,
+              "predicted": 0.34985750913619995,
+              "observed": 0.32701370120048523
+            },
+            {
+              "bin": 4,
+              "n": 46,
+              "predicted": 0.4302922189235687,
+              "observed": 0.44347384572029114
+            }
+          ]
+        },
+        "elevated_bp": {
+          "n": 1006,
+          "prevalence": 0.1138835921883583,
+          "roc_auc": 0.8047169167969752,
+          "pr_auc_ap": 0.35950058119078265,
+          "brier": 0.08776547988060422,
+          "log_loss": 0.29347251513070854,
+          "ece_10_bins": 0.016013484448194504,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "ppv": null,
+          "npv": 0.8861164104187654,
+          "mcc": 0.0,
+          "threshold": 0.5,
+          "reliability": [
+            {
+              "bin": 0,
+              "n": 673,
+              "predicted": 0.03806961327791214,
+              "observed": 0.043302424252033234
+            },
+            {
+              "bin": 1,
+              "n": 192,
+              "predicted": 0.14438585937023163,
+              "observed": 0.14457851648330688
+            },
+            {
+              "bin": 2,
+              "n": 108,
+              "predicted": 0.24364811182022095,
+              "observed": 0.29552292823791504
+            },
+            {
+              "bin": 3,
+              "n": 32,
+              "predicted": 0.32360878586769104,
+              "observed": 0.45856454968452454
+            },
+            {
+              "bin": 4,
+              "n": 1,
+              "predicted": 0.40457162261009216,
+              "observed": 1.0
+            }
+          ]
+        },
+        "elevated_tg": {
+          "n": 1006,
+          "prevalence": 0.19383014738559723,
+          "roc_auc": 0.8184854221260357,
+          "pr_auc_ap": 0.5139935466196179,
+          "brier": 0.12361832125726545,
+          "log_loss": 0.3872975447468146,
+          "ece_10_bins": 0.03894151747226715,
+          "sensitivity": 0.18985530471565687,
+          "specificity": 0.9760527533937332,
+          "ppv": 0.6559046606109838,
+          "npv": 0.8336356213272946,
+          "mcc": 0.2849889077537985,
+          "threshold": 0.5,
+          "reliability": [
+            {
+              "bin": 0,
+              "n": 557,
+              "predicted": 0.04173513501882553,
+              "observed": 0.056968048214912415
+            },
+            {
+              "bin": 1,
+              "n": 153,
+              "predicted": 0.1432945281267166,
+              "observed": 0.18908753991127014
+            },
+            {
+              "bin": 2,
+              "n": 91,
+              "predicted": 0.24534204602241516,
+              "observed": 0.17300128936767578
+            },
+            {
+              "bin": 3,
+              "n": 79,
+              "predicted": 0.3530142903327942,
+              "observed": 0.4427979588508606
+            },
+            {
+              "bin": 4,
+              "n": 79,
+              "predicted": 0.4455114006996155,
+              "observed": 0.47147098183631897
+            },
+            {
+              "bin": 5,
+              "n": 47,
+              "predicted": 0.5316680669784546,
+              "observed": 0.6559047102928162
+            }
+          ]
+        },
+        "low_hdl": {
+          "n": 1006,
+          "prevalence": 0.14139346778392792,
+          "roc_auc": 0.7784237841140866,
+          "pr_auc_ap": 0.33022963617953943,
+          "brier": 0.10663023100057117,
+          "log_loss": 0.3489509579460701,
+          "ece_10_bins": 0.01681312918663025,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "ppv": null,
+          "npv": 0.8586065338487019,
+          "mcc": 0.0,
+          "threshold": 0.5,
+          "reliability": [
+            {
+              "bin": 0,
+              "n": 480,
+              "predicted": 0.06409606337547302,
+              "observed": 0.034150026738643646
+            },
+            {
+              "bin": 1,
+              "n": 236,
+              "predicted": 0.14222565293312073,
+              "observed": 0.13704495131969452
+            },
+            {
+              "bin": 2,
+              "n": 146,
+              "predicted": 0.2464413195848465,
+              "observed": 0.25112518668174744
+            },
+            {
+              "bin": 3,
+              "n": 102,
+              "predicted": 0.3418644964694977,
+              "observed": 0.3345986306667328
+            },
+            {
+              "bin": 4,
+              "n": 42,
+              "predicted": 0.4330231845378876,
+              "observed": 0.4430404007434845
+            }
+          ]
+        }
+      },
+      "count_test_mae": 0.5007876753807068
+    },
+    "logistic_regression": {
+      "temperature": 0.8565307231917912,
+      "threshold": 0.16058047675202208,
+      "test_2024": {
+        "n": 1006,
+        "prevalence": 0.3661402503889821,
+        "roc_auc": 0.8306920261404908,
+        "pr_auc_ap": 0.7446575813961097,
+        "brier": 0.15725504476502514,
+        "log_loss": 0.4861371780331859,
+        "ece_10_bins": 0.04192652484710827,
+        "sensitivity": 0.9371794646032914,
+        "specificity": 0.3623615701461318,
+        "ppv": 0.4591641950437243,
+        "npv": 0.9089740376683645,
+        "mcc": 0.3320730449124152,
+        "threshold": 0.16058047675202208,
+        "reliability": [
+          {
+            "bin": 0,
+            "n": 136,
+            "predicted": 0.0698327314047511,
+            "observed": 0.038299563581763015
+          },
+          {
+            "bin": 1,
+            "n": 229,
+            "predicted": 0.14590840902135382,
+            "observed": 0.127867249631093
+          },
+          {
+            "bin": 2,
+            "n": 150,
+            "predicted": 0.2470134511728709,
+            "observed": 0.2213583424048374
+          },
+          {
+            "bin": 3,
+            "n": 135,
+            "predicted": 0.3473041078324049,
+            "observed": 0.27657003379829265
+          },
+          {
+            "bin": 4,
+            "n": 85,
+            "predicted": 0.4422370759813671,
+            "observed": 0.4329054724730483
+          },
+          {
+            "bin": 5,
+            "n": 82,
+            "predicted": 0.5482164147982501,
+            "observed": 0.6074810323148958
+          },
+          {
+            "bin": 6,
+            "n": 54,
+            "predicted": 0.6506378491208984,
+            "observed": 0.76725416568603
+          },
+          {
+            "bin": 7,
+            "n": 52,
+            "predicted": 0.7492143943803905,
+            "observed": 0.7905362985197258
+          },
+          {
+            "bin": 8,
+            "n": 45,
+            "predicted": 0.8437356240905346,
+            "observed": 0.8894898863221127
+          },
+          {
+            "bin": 9,
+            "n": 38,
+            "predicted": 0.9365672726270675,
+            "observed": 0.8527177185096672
+          }
+        ]
+      }
+    },
+    "hist_gradient_boosting": {
+      "temperature": 1.003312866341174,
+      "threshold": 0.20409662688567856,
+      "test_2024": {
+        "n": 1006,
+        "prevalence": 0.3661402503889821,
+        "roc_auc": 0.8326409842444589,
+        "pr_auc_ap": 0.7532463822932212,
+        "brier": 0.15749593090861178,
+        "log_loss": 0.4838128026249578,
+        "ece_10_bins": 0.04020682849237804,
+        "sensitivity": 0.9251253963468411,
+        "specificity": 0.46812173414512137,
+        "ppv": 0.5011758466596378,
+        "npv": 0.9154230759043102,
+        "mcc": 0.4047546551484193,
+        "threshold": 0.20409662688567856,
+        "reliability": [
+          {
+            "bin": 0,
+            "n": 112,
+            "predicted": 0.07675364593716631,
+            "observed": 0.06189690032991739
+          },
+          {
+            "bin": 1,
+            "n": 237,
+            "predicted": 0.14692217347081332,
+            "observed": 0.09678657389011458
+          },
+          {
+            "bin": 2,
+            "n": 179,
+            "predicted": 0.24593759014520877,
+            "observed": 0.20906234377630123
+          },
+          {
+            "bin": 3,
+            "n": 103,
+            "predicted": 0.349387553373577,
+            "observed": 0.3415883973528624
+          },
+          {
+            "bin": 4,
+            "n": 73,
+            "predicted": 0.4525495683481285,
+            "observed": 0.44985813574957423
+          },
+          {
+            "bin": 5,
+            "n": 56,
+            "predicted": 0.5420337346354208,
+            "observed": 0.44129524015741106
+          },
+          {
+            "bin": 6,
+            "n": 100,
+            "predicted": 0.6512210002005109,
+            "observed": 0.7001051454480696
+          },
+          {
+            "bin": 7,
+            "n": 90,
+            "predicted": 0.7431828315881456,
+            "observed": 0.7048279194853102
+          },
+          {
+            "bin": 8,
+            "n": 50,
+            "predicted": 0.8460821302071412,
+            "observed": 0.933070487954069
+          },
+          {
+            "bin": 9,
+            "n": 6,
+            "predicted": 0.9133288076712986,
+            "observed": 0.9247826152766925
+          }
+        ]
+      }
+    }
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "validation_joint_nll": 2.4477033615112305
+    },
+    {
+      "epoch": 2,
+      "validation_joint_nll": 2.0858078002929688
+    },
+    {
+      "epoch": 3,
+      "validation_joint_nll": 1.6751725673675537
+    },
+    {
+      "epoch": 4,
+      "validation_joint_nll": 1.458166480064392
+    },
+    {
+      "epoch": 5,
+      "validation_joint_nll": 1.394698977470398
+    },
+    {
+      "epoch": 6,
+      "validation_joint_nll": 1.3684420585632324
+    },
+    {
+      "epoch": 7,
+      "validation_joint_nll": 1.3498928546905518
+    },
+    {
+      "epoch": 8,
+      "validation_joint_nll": 1.3347454071044922
+    },
+    {
+      "epoch": 9,
+      "validation_joint_nll": 1.3246433734893799
+    },
+    {
+      "epoch": 10,
+      "validation_joint_nll": 1.3211073875427246
+    },
+    {
+      "epoch": 11,
+      "validation_joint_nll": 1.3201138973236084
+    },
+    {
+      "epoch": 12,
+      "validation_joint_nll": 1.3174883127212524
+    },
+    {
+      "epoch": 13,
+      "validation_joint_nll": 1.3186935186386108
+    },
+    {
+      "epoch": 14,
+      "validation_joint_nll": 1.3149218559265137
+    },
+    {
+      "epoch": 15,
+      "validation_joint_nll": 1.3150544166564941
+    },
+    {
+      "epoch": 16,
+      "validation_joint_nll": 1.307628870010376
+    },
+    {
+      "epoch": 17,
+      "validation_joint_nll": 1.3030860424041748
+    },
+    {
+      "epoch": 18,
+      "validation_joint_nll": 1.3024358749389648
+    },
+    {
+      "epoch": 19,
+      "validation_joint_nll": 1.3052071332931519
+    },
+    {
+      "epoch": 20,
+      "validation_joint_nll": 1.2995222806930542
+    },
+    {
+      "epoch": 21,
+      "validation_joint_nll": 1.2973552942276
+    },
+    {
+      "epoch": 22,
+      "validation_joint_nll": 1.2958121299743652
+    },
+    {
+      "epoch": 23,
+      "validation_joint_nll": 1.2973843812942505
+    },
+    {
+      "epoch": 24,
+      "validation_joint_nll": 1.2913738489151
+    },
+    {
+      "epoch": 25,
+      "validation_joint_nll": 1.2917101383209229
+    },
+    {
+      "epoch": 26,
+      "validation_joint_nll": 1.2886662483215332
+    },
+    {
+      "epoch": 27,
+      "validation_joint_nll": 1.2830238342285156
+    },
+    {
+      "epoch": 28,
+      "validation_joint_nll": 1.2885961532592773
+    },
+    {
+      "epoch": 29,
+      "validation_joint_nll": 1.2856347560882568
+    },
+    {
+      "epoch": 30,
+      "validation_joint_nll": 1.2933874130249023
+    },
+    {
+      "epoch": 31,
+      "validation_joint_nll": 1.288837194442749
+    },
+    {
+      "epoch": 32,
+      "validation_joint_nll": 1.2841095924377441
+    },
+    {
+      "epoch": 33,
+      "validation_joint_nll": 1.2956552505493164
+    },
+    {
+      "epoch": 34,
+      "validation_joint_nll": 1.2885823249816895
+    },
+    {
+      "epoch": 35,
+      "validation_joint_nll": 1.2891651391983032
+    },
+    {
+      "epoch": 36,
+      "validation_joint_nll": 1.2886561155319214
+    },
+    {
+      "epoch": 37,
+      "validation_joint_nll": 1.2884514331817627
+    },
+    {
+      "epoch": 38,
+      "validation_joint_nll": 1.2867789268493652
+    },
+    {
+      "epoch": 39,
+      "validation_joint_nll": 1.28912353515625
+    },
+    {
+      "epoch": 40,
+      "validation_joint_nll": 1.2903480529785156
+    },
+    {
+      "epoch": 41,
+      "validation_joint_nll": 1.2937991619110107
+    },
+    {
+      "epoch": 42,
+      "validation_joint_nll": 1.2885549068450928
+    },
+    {
+      "epoch": 43,
+      "validation_joint_nll": 1.296968936920166
+    },
+    {
+      "epoch": 44,
+      "validation_joint_nll": 1.2945005893707275
+    },
+    {
+      "epoch": 45,
+      "validation_joint_nll": 1.2902830839157104
+    },
+    {
+      "epoch": 46,
+      "validation_joint_nll": 1.2911045551300049
+    },
+    {
+      "epoch": 47,
+      "validation_joint_nll": 1.2848118543624878
+    },
+    {
+      "epoch": 48,
+      "validation_joint_nll": 1.2867788076400757
+    },
+    {
+      "epoch": 49,
+      "validation_joint_nll": 1.2947436571121216
+    },
+    {
+      "epoch": 50,
+      "validation_joint_nll": 1.2883737087249756
+    },
+    {
+      "epoch": 51,
+      "validation_joint_nll": 1.2897056341171265
+    },
+    {
+      "epoch": 52,
+      "validation_joint_nll": 1.28764009475708
+    }
+  ],
+  "limitations": [
+    "Cross-sectional screening, not prospective disease prediction.",
+    "No diagnosis is a proxy for unawareness of these lower-threshold metabolic findings.",
+    "Complete laboratory cases with >= fasting_hours; selection bias is possible.",
+    "KNHANES measured anthropometry is not validation of self-measured inputs.",
+    "Probability calibration and 90% sensitivity are not guaranteed on held-out data.",
+    "Bootstrap intervals resample observed eligible PSUs within strata; not official design-based domain intervals.",
+    "Single fixed architecture/seed; exploratory experiment, not clinical deployment."
+  ],
+  "latency_ms": {
+    "scope": "Warm CPU preprocessing + single forward + typed output; excludes startup, transport",
+    "p50": 4.124000000160777,
+    "p95": 4.888339999888557,
+    "repeats": 100
+  },
+  "environment": {
+    "python": "3.13.1",
+    "torch": "2.8.0+cu126",
+    "device": "cpu",
+    "threads": 2
+  },
+  "source_hashes": {
+    "metabolic\\api.py": "ad0843b610967e1aad0d4bc75c4bd83d32266d91dcbc93e1629cf1a081aa9620",
+    "metabolic\\data.py": "be69e4cc340f827ba42b379aab7643427bd0c1264007edb8adaf430680a7263a",
+    "metabolic\\decisions.py": "54decc8b32b432109f08015ee3332b05b6b23ef18e2c2b541d2f2cb08f838578",
+    "metabolic\\network.py": "395562c5d91c08f3c8a0fd17a90194bba5c86616b5884762d8d05801ea1d3f0b",
+    "metabolic\\predict.py": "03abd0fa20854c49f46e0099d40d0cfd55f978211c4153c8bee8935a572a0536",
+    "metabolic\\train.py": "8c10995927aab95177e2e246a64a6ea6ea001414d347549b094a5efd8e091dd2",
+    "metabolic\\__init__.py": "1fa8b88d98da402c975ec79cfba98c072c44b86df17aa80686f1bf5a5e416e40"
+  },
+  "input_hashes": {
+    "HN21_ALL(SPSS).zip": "e13c95efd1c0e81f21d972bca3b78a8e302a810c67569fcdd606f50d8cb43c03",
+    "HN22_ALL(SPSS).zip": "80a6f2fb4d9c86170592b4412774ebd8850acd22236a62e538f4e317fdb044c1",
+    "HN23_ALL(SPSS).zip": "b56f6b76b0c41e0a045ae6174d251217dff8f93a212772417c401fab4e52f740",
+    "HN24_ALL(SPSS).zip": "4b56086db18783abfa3ab74e9a591796ba8131755e7f713c7c043e635c06af12"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "threads": 1,
+  "device": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "scope": "Warm CPU, identical input validation and binary JSON output. Excludes loading and HTTP. Optimized LR uses the same array runtime strategy.",
+  "common": {
+    "v1_legacy_nn": {
+      "p50_ms": 4.05285,
+      "p95_ms": 5.39715,
+      "repeats": 1000
+    },
+    "v1_fast_nn": {
+      "p50_ms": 0.0879,
+      "p95_ms": 0.12510999999999997,
+      "repeats": 1000
+    },
+    "v2_refined_nn": {
+      "p50_ms": 0.0559,
+      "p95_ms": 0.0804,
+      "repeats": 1000
+    },
+    "lr_legacy": {
+      "p50_ms": 4.03335,
+      "p95_ms": 5.335205,
+      "repeats": 1000
+    },
+    "lr_fast": {
+      "p50_ms": 0.043,
+      "p95_ms": 0.06441499999999999,
+      "repeats": 1000
+    },
+    "lr_tuned_fast": {
+      "p50_ms": 0.0494,
+      "p95_ms": 0.07150499999999999,
+      "repeats": 1000
+    }
+  },
+  "full_schema": {
+    "v1_fast_nn": {
+      "p50_ms": 0.0949,
+      "p95_ms": 0.15632499999999996,
+      "repeats": 1000
+    },
+    "v2_refined_nn": {
+      "p50_ms": 0.08345,
+      "p95_ms": 0.14140999999999998,
+      "repeats": 1000
+    }
+  },
+  "legacy_stage_profile": {
+    "validation": {
+      "p50_ms": 0.0084,
+      "p95_ms": 0.010305000000000002,
+      "repeats": 300
+    },
+    "dataframe_and_features": {
+      "p50_ms": 2.1323,
+      "p95_ms": 2.874075,
+      "repeats": 300
+    },
+    "sklearn_transform": {
+      "p50_ms": 1.7906499999999999,
+      "p95_ms": 2.35896,
+      "repeats": 300
+    },
+    "torch_forward": {
+      "p50_ms": 0.1018,
+      "p95_ms": 0.130415,
+      "repeats": 300
+    },
+    "typed_output": {
+      "p50_ms": 0.0818,
+      "p95_ms": 0.10513,
+      "repeats": 300
+    }
+  },
+  "v1_equivalence": {
+    "n": 4068,
+    "max_probability_difference": 4.172325134277344e-07,
+    "binary_changes_at_saved_threshold": 0
+  }
+}

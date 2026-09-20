@@ -1,0 +1,28 @@
+# Participant-level or locally generated research material
+/data/
+/artifacts/
+/.benchmarks/
+/.venv/
+/output/
+/.pptx-build/
+/.publish/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.zip
+*.sav
+*.sas7bdat
+*.parquet
+*.pt
+*.joblib
+*.npz
+*.npy
+.env
+.env.*
+
+# Publish aggregate files only through the explicit results/ allowlist.
+**/test_predictions.json
+**/split_manifest.json
+**/*oof_predictions.json
+**/*_oof.npy
+**/environment_freeze.txt

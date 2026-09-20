@@ -1,0 +1,46 @@
+{
+  "design": "2x2: base/expanded inputs x single/multitask NN; no auxiliary labels in single-task initialization, loss or early stopping",
+  "extra_features": [
+    "sedentary_hours",
+    "walking_days",
+    "stress_level",
+    "employed",
+    "alcohol_frequency",
+    "alcohol_amount",
+    "strength_days",
+    "family_history",
+    "living_alone"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "NN_hidden": 4,
+  "NN_basis": "hinge",
+  "LR_C": [
+    0.03,
+    0.1,
+    0.3
+  ],
+  "cohort": "Same 4068; 3062 development 2021-2023; reused 2024 evaluation n1006",
+  "splits": "Exactly specialized_v3 OOF folds and PSU-separated OOF calibration/threshold roles",
+  "training": "Fold-internal primary-BCE early stopping for both tasks, then refit outer training fold. LR initialization C=0.1. Multi BCE+.2 marginal BCE+.05 conditional NLL.",
+  "primary_nn": "Seed42 prespecified for detailed CI; other seeds stability only, never choose best test seed",
+  "LR_comparison": "Five independently trained/tuned logistic outputs per feature set, C selected per endpoint using development OOF only",
+  "calibration": "OOF calibration role only; threshold role distinct. Both re-use model-selection development outcomes; exploratory.",
+  "evaluation": [
+    "overall AUC/AP/Brier",
+    "four individual endpoints",
+    "macro four-endpoint AUC/AP/Brier",
+    "expected abnormality-count MAE",
+    "coherence",
+    "household strata"
+  ],
+  "exclusions": [
+    "sleep question form changed in 2024",
+    "dietary recall variables require nutrition participation/weight handling",
+    "personal diagnosis, medication, fasting and laboratory variables never added as predictors"
+  ],
+  "stop_rule": "Report all planned cells and seeds; no 2024-based feature or architecture selection"
+}

@@ -1,0 +1,52 @@
+{
+  "answers": {
+    "screening": {
+      "type": "choice",
+      "choice": "screen_negative",
+      "probabilities": {
+        "screen_negative": 0.6264773361110011,
+        "screen_positive": 0.37352266388899885
+      },
+      "confidence": 0.6264773361110011
+    },
+    "risk": {
+      "type": "noul",
+      "value": false,
+      "noul": 0.37352266388899885,
+      "confidence": 0.6264773361110011,
+      "probabilities": {
+        "false": 0.6264773361110011,
+        "true": 0.37352266388899885
+      }
+    },
+    "burden": {
+      "type": "score",
+      "score": 0.4960826906110268,
+      "confidence": 0.6264773361110011,
+      "confidence_definition": "Probability of the modal count category, not confidence that the expected score is exact.",
+      "minimum": 0,
+      "maximum": 4,
+      "probabilities": {
+        "0.0": 0.6264773361110011,
+        "1.0": 0.2663407556375017,
+        "2.0": 0.09256239616779975,
+        "3.0": 0.013860905696864278,
+        "4.0": 0.0007586063868331659
+      }
+    }
+  },
+  "component_probabilities": {
+    "elevated_glucose": 0.09144847963891668,
+    "elevated_bp": 0.10683894104345903,
+    "elevated_tg": 0.17844270440698456,
+    "low_hdl": 0.11935256552166645
+  },
+  "threshold": 0.38037371183136703,
+  "research_only": true,
+  "confidence_definition": "Probability assigned to the chosen category; not epistemic certainty or a guarantee of correctness.",
+  "model": "expanded_multi_s42",
+  "policy": "youden",
+  "missing_inputs": [],
+  "exploratory_extension": true,
+  "living_alone_definition": "Single-person household; not verified independent living"
+}

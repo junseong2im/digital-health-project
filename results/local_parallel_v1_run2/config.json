@@ -1,0 +1,25 @@
+{
+  "run_name": "local_parallel_v1_run2",
+  "cohort": "unaware",
+  "fasting_hours": 12,
+  "epochs": 250,
+  "seed": 42,
+  "sensitivity": 0.9,
+  "temperature": 0.9427565963022061,
+  "threshold": 0.1441582441329956,
+  "best_epoch": 27,
+  "architecture": "MLP joint categorical distribution over 16 metabolic patterns",
+  "training": "Survey-weighted supervised categorical log loss + held-out temperature scaling; not RLCD",
+  "features": [
+    "age",
+    "HE_BMI",
+    "HE_wc",
+    "WHtR",
+    "sex",
+    "incm",
+    "edu",
+    "sm_presnt",
+    "dr_month",
+    "pa_aerobic"
+  ]
+}

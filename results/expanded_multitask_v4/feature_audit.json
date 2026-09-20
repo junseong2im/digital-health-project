@@ -1,0 +1,260 @@
+{
+  "raw_variables": [
+    "cfam",
+    "EC1_1",
+    "BP1",
+    "BD1",
+    "BD1_11",
+    "BD2_1",
+    "BE3_31",
+    "BE5_1",
+    "BE8_1",
+    "BE8_2",
+    "HE_fh"
+  ],
+  "extra_features": [
+    "sedentary_hours",
+    "walking_days",
+    "stress_level",
+    "employed",
+    "alcohol_frequency",
+    "alcohol_amount",
+    "strength_days",
+    "family_history",
+    "living_alone"
+  ],
+  "by_year": {
+    "2021": {
+      "sedentary_hours": {
+        "missing": 21,
+        "n": 1039,
+        "min": 1.0,
+        "max": 18.0
+      },
+      "walking_days": {
+        "missing": 20,
+        "n": 1039,
+        "min": 0.0,
+        "max": 7.0
+      },
+      "stress_level": {
+        "missing": 1,
+        "n": 1039,
+        "min": 1.0,
+        "max": 4.0
+      },
+      "employed": {
+        "missing": 20,
+        "n": 1039,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "alcohol_frequency": {
+        "missing": 1,
+        "n": 1039,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "alcohol_amount": {
+        "missing": 1,
+        "n": 1039,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "strength_days": {
+        "missing": 20,
+        "n": 1039,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "family_history": {
+        "missing": 7,
+        "n": 1039,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "living_alone": {
+        "missing": 0,
+        "n": 1039,
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    "2022": {
+      "sedentary_hours": {
+        "missing": 46,
+        "n": 1013,
+        "min": 1.0,
+        "max": 18.0
+      },
+      "walking_days": {
+        "missing": 46,
+        "n": 1013,
+        "min": 0.0,
+        "max": 7.0
+      },
+      "stress_level": {
+        "missing": 1,
+        "n": 1013,
+        "min": 1.0,
+        "max": 4.0
+      },
+      "employed": {
+        "missing": 46,
+        "n": 1013,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "alcohol_frequency": {
+        "missing": 1,
+        "n": 1013,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "alcohol_amount": {
+        "missing": 1,
+        "n": 1013,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "strength_days": {
+        "missing": 46,
+        "n": 1013,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "family_history": {
+        "missing": 12,
+        "n": 1013,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "living_alone": {
+        "missing": 0,
+        "n": 1013,
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    "2023": {
+      "sedentary_hours": {
+        "missing": 34,
+        "n": 1010,
+        "min": 1.0,
+        "max": 17.0
+      },
+      "walking_days": {
+        "missing": 33,
+        "n": 1010,
+        "min": 0.0,
+        "max": 7.0
+      },
+      "stress_level": {
+        "missing": 3,
+        "n": 1010,
+        "min": 1.0,
+        "max": 4.0
+      },
+      "employed": {
+        "missing": 33,
+        "n": 1010,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "alcohol_frequency": {
+        "missing": 3,
+        "n": 1010,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "alcohol_amount": {
+        "missing": 3,
+        "n": 1010,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "strength_days": {
+        "missing": 33,
+        "n": 1010,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "family_history": {
+        "missing": 138,
+        "n": 1010,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "living_alone": {
+        "missing": 0,
+        "n": 1010,
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    "2024": {
+      "sedentary_hours": {
+        "missing": 44,
+        "n": 1006,
+        "min": 2.0,
+        "max": 18.0
+      },
+      "walking_days": {
+        "missing": 43,
+        "n": 1006,
+        "min": 0.0,
+        "max": 7.0
+      },
+      "stress_level": {
+        "missing": 10,
+        "n": 1006,
+        "min": 1.0,
+        "max": 4.0
+      },
+      "employed": {
+        "missing": 44,
+        "n": 1006,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "alcohol_frequency": {
+        "missing": 10,
+        "n": 1006,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "alcohol_amount": {
+        "missing": 10,
+        "n": 1006,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "strength_days": {
+        "missing": 43,
+        "n": 1006,
+        "min": 0.0,
+        "max": 5.0
+      },
+      "family_history": {
+        "missing": 47,
+        "n": 1006,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "living_alone": {
+        "missing": 0,
+        "n": 1006,
+        "min": 0.0,
+        "max": 1.0
+      }
+    }
+  },
+  "cohort_n": 4068,
+  "rules": {
+    "alcohol_nonuse": "BD1=1 & BD1_11=8 -> frequency0; amount8 ->0 only if lifetime non-drinker or last-year no drinking",
+    "walking": "BE3_31=1..8 ->0..7 days; 88/99 ->missing",
+    "strength": "BE5_1=1..6 ->0..5 categories;5 means >=5 days",
+    "sedentary": "BE8_1 0..24 + BE8_2 0..59 /60; total<=24; 88/99 ->missing",
+    "others": "Use verified finite code sets; no general sentinel-to-zero replacement"
+  }
+}
