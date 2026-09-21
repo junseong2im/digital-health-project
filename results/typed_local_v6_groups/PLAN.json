@@ -1,0 +1,17 @@
+{
+  "sources": [
+    "https://docs.typesafe.ai/introduction",
+    "https://docs.typesafe.ai/primitives",
+    "https://docs.typesafe.ai/confidence",
+    "https://docs.typesafe.ai/patterns"
+  ],
+  "adaptation": "Public interface/decision architecture only. Not knowledge distillation, proprietary model replication, or RLCD.",
+  "external_teacher_calls": 0,
+  "api_keys_used": false,
+  "new_neural_training": false,
+  "backbone": "screening_v5/models/expanded_NN, unchanged",
+  "guardrail_design": "Feature bounds from training min/max; concentration floor = validation tenth percentile; fixed probability distance .02 from cutoff; missing inputs flagged; threshold-role subgroup positive n<20 or sensitivity below target flagged",
+  "subgroup_revision": "Exploratory follow-up rule after subgroup audit; support values come only from 2023 threshold-role data; not a prospective validation",
+  "scope": "Question requests select deterministic views; no natural-language task induction; no test-defined subgroup thresholds",
+  "medical_boundary": "No high-confidence automatic medical clearance; review flag does not silently change screen result"
+}

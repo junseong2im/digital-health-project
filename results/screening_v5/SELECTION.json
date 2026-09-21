@@ -1,0 +1,120 @@
+{
+  "candidates": {
+    "base_NN": [
+      {
+        "seed": 42,
+        "epochs": 44,
+        "specificity_score": 0.30970223104342476,
+        "brier": 0.1777395863838777
+      },
+      {
+        "seed": 43,
+        "epochs": 11,
+        "specificity_score": 0.2977558029347047,
+        "brier": 0.17752815670142813
+      },
+      {
+        "seed": 44,
+        "epochs": 84,
+        "specificity_score": 0.3200172874150298,
+        "brier": 0.17800534508235435
+      }
+    ],
+    "base_LR": [
+      {
+        "C": 0.03,
+        "specificity_score": 0.31156488310182345,
+        "brier": 0.17816200806038035
+      },
+      {
+        "C": 0.1,
+        "specificity_score": 0.29890838178074464,
+        "brier": 0.17760633858611669
+      },
+      {
+        "C": 0.3,
+        "specificity_score": 0.2979085389178635,
+        "brier": 0.17761715767815064
+      },
+      {
+        "C": 1.0,
+        "specificity_score": 0.28974590551611484,
+        "brier": 0.17775388280861182
+      }
+    ],
+    "expanded_NN": [
+      {
+        "seed": 42,
+        "epochs": 91,
+        "specificity_score": 0.3307440781401061,
+        "brier": 0.17737270988252649
+      },
+      {
+        "seed": 43,
+        "epochs": 3,
+        "specificity_score": 0.3610700490688891,
+        "brier": 0.17779129388470957
+      },
+      {
+        "seed": 44,
+        "epochs": 4,
+        "specificity_score": 0.3631266757732446,
+        "brier": 0.17769074118932954
+      }
+    ],
+    "expanded_LR": [
+      {
+        "C": 0.03,
+        "specificity_score": 0.3361156131403342,
+        "brier": 0.1780716377809992
+      },
+      {
+        "C": 0.1,
+        "specificity_score": 0.3610700490688891,
+        "brier": 0.1777580744419929
+      },
+      {
+        "C": 0.3,
+        "specificity_score": 0.3386645197586906,
+        "brier": 0.17818634123931687
+      },
+      {
+        "C": 1.0,
+        "specificity_score": 0.3028536217730198,
+        "brier": 0.1789297959325899
+      }
+    ]
+  },
+  "selected": {
+    "base_NN": {
+      "seed": 44,
+      "epochs": 84,
+      "specificity_score": 0.3200172874150298,
+      "brier": 0.17800534508235435,
+      "expanded": false,
+      "kind": "NN"
+    },
+    "base_LR": {
+      "C": 0.03,
+      "specificity_score": 0.31156488310182345,
+      "brier": 0.17816200806038035,
+      "expanded": false,
+      "kind": "LR"
+    },
+    "expanded_NN": {
+      "seed": 44,
+      "epochs": 4,
+      "specificity_score": 0.3631266757732446,
+      "brier": 0.17769074118932954,
+      "expanded": true,
+      "kind": "NN"
+    },
+    "expanded_LR": {
+      "C": 0.1,
+      "specificity_score": 0.3610700490688891,
+      "brier": 0.1777580744419929,
+      "expanded": true,
+      "kind": "LR"
+    }
+  }
+}

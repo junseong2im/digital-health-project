@@ -160,6 +160,6 @@ class ExpandedPredictor:
 if __name__=='__main__':
     import argparse
     a=argparse.ArgumentParser();a.add_argument('--artifact',required=True);a.add_argument('--input',required=True)
-    a.add_argument('--policy',choices=['youden','sensitivity90'],default='youden');args=a.parse_args()
+    a.add_argument('--policy',choices=['youden','sensitivity90','sensitivity95'],default='youden');args=a.parse_args()
     payload=json.loads(Path(args.input).read_text(encoding='utf-8-sig'))
     print(json.dumps(ExpandedPredictor(args.artifact).predict(payload.get('state',payload),args.policy),ensure_ascii=False,indent=2,allow_nan=False))

@@ -1,0 +1,83 @@
+{
+  "answers": {
+    "risk": {
+      "type": "noul",
+      "noul": 0.4403954274025376
+    },
+    "glucose": {
+      "type": "noul",
+      "noul": 0.0900219438627554
+    },
+    "bp": {
+      "type": "noul",
+      "noul": 0.10496198394595846
+    },
+    "tg": {
+      "type": "noul",
+      "noul": 0.223448234479233
+    },
+    "hdl": {
+      "type": "noul",
+      "noul": 0.13800023337429795
+    },
+    "burden": {
+      "type": "score",
+      "score": 0.5564323956622448,
+      "legend": {
+        "0.0": "0 of 4 abnormal findings",
+        "1.0": "1 of 4 abnormal findings",
+        "2.0": "2 of 4 abnormal findings",
+        "3.0": "3 of 4 abnormal findings",
+        "4.0": "4 of 4 abnormal findings"
+      },
+      "probabilities": {
+        "0.0": 0.5596045725974624,
+        "1.0": 0.33608835925522107,
+        "2.0": 0.09302915609969908,
+        "3.0": 0.0108259239828443,
+        "4.0": 0.00045198806477318325
+      },
+      "confidence": 0.40057606435988125,
+      "confidence_method": "one_minus_normalized_entropy"
+    },
+    "posterior_class": {
+      "type": "choice",
+      "choice": "no_abnormality",
+      "probabilities": {
+        "no_abnormality": 0.5596045725974623,
+        "any_abnormality": 0.4403954274025376
+      },
+      "confidence": 0.01027535809995439,
+      "confidence_method": "one_minus_normalized_entropy"
+    }
+  },
+  "policy_result": {
+    "policy": "sensitivity90",
+    "screen_positive": true,
+    "threshold": 0.1725330948829651,
+    "review_required": true,
+    "review_reasons": [
+      "limited_development_group_support",
+      "development_group_target_not_met"
+    ],
+    "development_group": "age20_29_living1",
+    "development_group_support": {
+      "positive_n": 12,
+      "n": 40,
+      "observed_sensitivity": 0.8932705939092523,
+      "target_sensitivity": 0.9
+    },
+    "review_is_not_a_diagnosis": true,
+    "negative_is_not_medical_clearance": true
+  },
+  "input_quality": {
+    "missing": [],
+    "outside_observed_training_range": []
+  },
+  "model": "expanded_NN",
+  "schema_version": "local-atomic-v1",
+  "forward_passes": 1,
+  "research_only": true,
+  "external_model_calls": 0,
+  "confidence_note": "Choice/Score confidence is an entropy statistic, not calibrated correctness or epistemic uncertainty. Noul has no separate confidence."
+}

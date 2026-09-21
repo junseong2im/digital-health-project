@@ -1,0 +1,58 @@
+{
+  "state": {
+    "age": 29,
+    "sex": 1,
+    "HE_BMI": 25.0,
+    "HE_wc": 87.0,
+    "HE_ht": 175.0,
+    "incm": 2,
+    "edu": 4,
+    "sm_presnt": 0,
+    "dr_month": 1,
+    "pa_aerobic": 1,
+    "sedentary_hours": 8.5,
+    "walking_days": 4,
+    "stress_level": 2,
+    "employed": 1,
+    "alcohol_frequency": 3,
+    "alcohol_amount": 2,
+    "strength_days": 2,
+    "family_history": 1,
+    "living_alone": 1
+  },
+  "questions": {
+    "risk": {
+      "type": "noul",
+      "target": "any_abnormality"
+    },
+    "glucose": {
+      "type": "noul",
+      "target": "elevated_glucose"
+    },
+    "bp": {
+      "type": "noul",
+      "target": "elevated_bp"
+    },
+    "tg": {
+      "type": "noul",
+      "target": "elevated_tg"
+    },
+    "hdl": {
+      "type": "noul",
+      "target": "low_hdl"
+    },
+    "burden": {
+      "type": "score",
+      "target": "abnormality_count"
+    },
+    "posterior_class": {
+      "type": "choice",
+      "target": "any_abnormality",
+      "labels": [
+        "no_abnormality",
+        "any_abnormality"
+      ]
+    }
+  },
+  "policy": "sensitivity90"
+}

@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-21",
+  "purpose": "Current undiagnosed metabolic-abnormality screening, not future disease prediction",
+  "main_cohort": "Unchanged age19-39 unaware cohort; 12h fasting and complete targets",
+  "roles": "Exact v1 PSU-disjoint roles: 2021-22 train1680/validation372; 2023 calibration481/threshold529; 2024 test1006",
+  "change_from_v4": "No final refit on calibration or threshold participants. Frozen architecture from past exploratory work; no claim of fresh external validation.",
+  "models": [
+    "base_NN",
+    "base_LR",
+    "expanded_NN",
+    "expanded_LR"
+  ],
+  "nn_seeds": [
+    42,
+    43,
+    44
+  ],
+  "LR_C": [
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "selection": "Validation-only average specificity at empirical sensitivity90 and sensitivity95; Brier tie-break; NN early-stop validation BCE then refit same train rows",
+  "cutoffs": "2023 threshold role only; primary sensitivity90/95, secondary Youden",
+  "primary_measures": [
+    "actual sensitivity",
+    "specificity",
+    "referral_rate",
+    "PPV",
+    "NPV",
+    "missed_per_1000",
+    "unnecessary_referrals_per_1000",
+    "tests_per_detected"
+  ],
+  "uncertainty": "300 full-frame Rao-Wu-style PSU resamples separately for calibration, threshold and test; calibration/cutoffs refit per replicate; model fitting/selection uncertainty not included",
+  "household": "20-29 and30-39, single vs multi household, sex strata; age19 separate. Global cutoff applied to all subgroups; no test-based subgroup tuning",
+  "DCA": "Exploratory common probability thresholds .05-.50, refer-all and refer-none references; no empirically established clinical cost ratio",
+  "sensitivity_analysis": "Frozen fitted models evaluated in >=8h and untreated cohorts; not new training or interchangeable clinical definitions",
+  "limitations": [
+    "2024 and architecture-development data were inspected before; this is exploratory.",
+    "No direct independent-living/self-catering variable; cfam is household-size proxy.",
+    "Official design weights used, but resampled weights are not official KNHANES replicate weights and no FPC is applied."
+  ]
+}

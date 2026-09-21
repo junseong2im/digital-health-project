@@ -1,5 +1,6 @@
 """Optional local HTTP interface. No external services are called."""
 import os
+from typing import Literal
 from functools import lru_cache
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
@@ -10,6 +11,8 @@ from .fast import FastPredictor
 from .refined import RefinedPredictor
 from .specialized import SpecializedPredictor
 from .expanded import ExpandedPatient, ExpandedPredictor
+from .expanded import EXTRA
+from .local_decisions import LocalDecisionRequest, LocalDecisionEngine
 from .household import HouseholdPatient, HouseholdPredictor
 
 app = FastAPI(title='Young-adult metabolic screening research model')
@@ -94,5 +97,41 @@ def expanded_predictor():
 def decide_expanded(request: ExpandedDecisionRequest):
     try:
         return expanded_predictor().predict(request.state.model_dump(),request.policy)
+    except ValueError as exc:
+        raise HTTPException(status_code=422,detail=str(exc)) from exc
+
+class ScreeningRequest(BaseModel):
+    model_config=ConfigDict(extra='forbid')
+    state: ExpandedPatient
+    input_set: Literal['base','expanded']='expanded'
+    policy: Literal['sensitivity90','sensitivity95']='sensitivity90'
+
+@lru_cache
+def screening_predictor(input_set: str):
+    default=Path(__file__).resolve().parents[1]/'artifacts/screening_v5/models'/f'{input_set}_NN'
+    return ExpandedPredictor(default)
+
+@app.post('/v5/screen')
+def screen(request: ScreeningRequest):
+    try:
+        state=request.state.model_dump()
+        if request.input_set=='base':state={k:v for k,v in state.items() if k not in EXTRA}
+        result=screening_predictor(request.input_set).predict(state,request.policy)
+        result['experiment']='screening_v5'
+        result['development_sensitivity_target']=.90 if request.policy=='sensitivity90' else .95
+        result['validation_notice']='Development sensitivity target is not a guarantee for a new individual, population, or age/household subgroup.'
+        return result
+    except ValueError as exc:
+        raise HTTPException(status_code=422,detail=str(exc)) from exc
+
+@lru_cache
+def local_decision_engine():
+    root=Path(__file__).resolve().parents[1]
+    return LocalDecisionEngine(root/'artifacts/screening_v5/models/expanded_NN',root/'artifacts/typed_local_v6_groups/guardrails.json')
+
+@app.post('/v6/decide-local')
+def decide_local(request: LocalDecisionRequest):
+    try:
+        return local_decision_engine().decide(request)
     except ValueError as exc:
         raise HTTPException(status_code=422,detail=str(exc)) from exc

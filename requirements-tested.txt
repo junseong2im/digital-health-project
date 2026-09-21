@@ -17,3 +17,4 @@ lightgbm==4.6.0
 statsmodels==0.14.4
 httpx==0.28.1
 threadpoolctl==3.6.0
+patsy==1.0.1

@@ -1,0 +1,69 @@
+{
+  "answers": {
+    "screening": {
+      "type": "choice",
+      "choice": "screen_positive",
+      "probabilities": {
+        "screen_negative": 0.7742602020003406,
+        "screen_positive": 0.22573979799965943
+      },
+      "confidence": 0.22573979799965943
+    },
+    "risk": {
+      "type": "noul",
+      "value": true,
+      "noul": 0.22573979799965943,
+      "confidence": 0.22573979799965943,
+      "probabilities": {
+        "false": 0.7742602020003406,
+        "true": 0.22573979799965943
+      }
+    },
+    "burden": {
+      "type": "score",
+      "score": 0.24897240405563523,
+      "confidence": 0.7742602020003406,
+      "confidence_definition": "Probability of the modal count category, not confidence that the expected score is exact.",
+      "minimum": 0,
+      "maximum": 4,
+      "probabilities": {
+        "0.0": 0.7742602020003406,
+        "1.0": 0.2033825722540779,
+        "2.0": 0.021490739252668395,
+        "3.0": 0.0008575926754319224,
+        "4.0": 8.893817481193033e-06
+      }
+    }
+  },
+  "component_probabilities": {
+    "elevated_glucose": 0.013585153658437116,
+    "elevated_bp": 0.05574206998488397,
+    "elevated_tg": 0.09013803965650438,
+    "low_hdl": 0.08950714075580976
+  },
+  "threshold": 0.10138056427240372,
+  "research_only": true,
+  "confidence_definition": "Probability assigned to the chosen category; not epistemic certainty or a guarantee of correctness.",
+  "model": "expanded_NN",
+  "policy": "sensitivity95",
+  "missing_inputs": [
+    "incm",
+    "edu",
+    "sm_presnt",
+    "dr_month",
+    "pa_aerobic",
+    "sedentary_hours",
+    "walking_days",
+    "stress_level",
+    "employed",
+    "alcohol_frequency",
+    "alcohol_amount",
+    "strength_days",
+    "family_history"
+  ],
+  "exploratory_extension": true,
+  "living_alone_definition": "Single-person household; not verified independent living",
+  "experiment": "screening_v5",
+  "development_sensitivity_target": 0.95,
+  "validation_notice": "Development sensitivity target is not a guarantee for a new individual, population, or age/household subgroup."
+}

@@ -1,0 +1,282 @@
+{
+  "plan": {
+    "sources": [
+      "https://docs.typesafe.ai/introduction",
+      "https://docs.typesafe.ai/primitives",
+      "https://docs.typesafe.ai/confidence",
+      "https://docs.typesafe.ai/patterns"
+    ],
+    "adaptation": "Public interface/decision architecture only. Not knowledge distillation, proprietary model replication, or RLCD.",
+    "external_teacher_calls": 0,
+    "api_keys_used": false,
+    "new_neural_training": false,
+    "backbone": "screening_v5/models/expanded_NN, unchanged",
+    "guardrail_design": "Feature bounds from training min/max; concentration floor = validation tenth percentile; fixed probability distance .02 from cutoff; missing inputs flagged; threshold-role subgroup positive n<20 or sensitivity below target flagged",
+    "subgroup_revision": "Exploratory follow-up rule after subgroup audit; support values come only from 2023 threshold-role data; not a prospective validation",
+    "scope": "Question requests select deterministic views; no natural-language task induction; no test-defined subgroup thresholds",
+    "medical_boundary": "No high-confidence automatic medical clearance; review flag does not silently change screen result"
+  },
+  "guardrails": {
+    "confidence_floor": 0.00784713032015787,
+    "confidence_definition": "1-H(probabilities)/log(K), local definition, not vendor formula",
+    "threshold_margin": 0.02,
+    "training_ranges": {
+      "age": [
+        19.0,
+        39.0
+      ],
+      "HE_BMI": [
+        14.869606331044679,
+        46.585260754962256
+      ],
+      "HE_wc": [
+        55.5,
+        139.7
+      ],
+      "HE_ht": [
+        130.7,
+        195.0
+      ],
+      "sedentary_hours": [
+        1.0,
+        18.0
+      ],
+      "walking_days": [
+        0.0,
+        7.0
+      ]
+    },
+    "fit_roles": {
+      "ranges": "train",
+      "confidence_floor": "validation"
+    },
+    "no_individual_correctness_guarantee": true,
+    "development_group_support": {
+      "age19": {
+        "sensitivity90": {
+          "positive_n": 5,
+          "n": 19,
+          "observed_sensitivity": 0.13498565994901726,
+          "target_sensitivity": 0.9
+        },
+        "sensitivity95": {
+          "positive_n": 5,
+          "n": 19,
+          "observed_sensitivity": 0.7875260138572945,
+          "target_sensitivity": 0.95
+        }
+      },
+      "age20_29_living0": {
+        "sensitivity90": {
+          "positive_n": 52,
+          "n": 203,
+          "observed_sensitivity": 0.7932545950248655,
+          "target_sensitivity": 0.9
+        },
+        "sensitivity95": {
+          "positive_n": 52,
+          "n": 203,
+          "observed_sensitivity": 0.8847924883045861,
+          "target_sensitivity": 0.95
+        }
+      },
+      "age20_29_living1": {
+        "sensitivity90": {
+          "positive_n": 12,
+          "n": 40,
+          "observed_sensitivity": 0.8932705939092523,
+          "target_sensitivity": 0.9
+        },
+        "sensitivity95": {
+          "positive_n": 12,
+          "n": 40,
+          "observed_sensitivity": 0.8932705939092523,
+          "target_sensitivity": 0.95
+        }
+      },
+      "age30_39_living0": {
+        "sensitivity90": {
+          "positive_n": 95,
+          "n": 226,
+          "observed_sensitivity": 0.9904252749407643,
+          "target_sensitivity": 0.9
+        },
+        "sensitivity95": {
+          "positive_n": 95,
+          "n": 226,
+          "observed_sensitivity": 1.0,
+          "target_sensitivity": 0.95
+        }
+      },
+      "age30_39_living1": {
+        "sensitivity90": {
+          "positive_n": 17,
+          "n": 41,
+          "observed_sensitivity": 0.9520671879239516,
+          "target_sensitivity": 0.9
+        },
+        "sensitivity95": {
+          "positive_n": 17,
+          "n": 41,
+          "observed_sensitivity": 1.0,
+          "target_sensitivity": 0.95
+        }
+      }
+    },
+    "minimum_group_positive_n": 20
+  },
+  "policies": {
+    "sensitivity90": {
+      "valid_state_n": 1002,
+      "invalid_state_n": 4,
+      "review_n": 717,
+      "weighted_review_rate": 0.6915365330669595,
+      "review_reasons_unweighted": {
+        "low_distribution_concentration": 82,
+        "development_group_target_not_met": 540,
+        "insufficient_or_invalid_state": 4,
+        "limited_development_group_support": 209,
+        "missing_inputs": 85,
+        "outside_observed_training_range": 3,
+        "near_screening_cutoff": 74
+      },
+      "max_probability_difference": 1.7881393432617188e-07,
+      "screen_decision_changes_on_valid_states": 0,
+      "original_screening": {
+        "n": 1006,
+        "positive_n": 343,
+        "negative_n": 663,
+        "cutoff": 0.1725330948829651,
+        "prevalence": 0.3661402510524164,
+        "sensitivity": 0.9349384045747743,
+        "specificity": 0.42040700979102813,
+        "ppv": 0.4823431649983918,
+        "npv": 0.9179414147689404,
+        "miss_rate_among_positive": 0.06506159542522573,
+        "referral_rate": 0.7096992494351917,
+        "referrals_per_1000": 709.6992494351917,
+        "detected_per_1000": 342.3185821695535,
+        "missed_per_1000": 23.821668882862895,
+        "unnecessary_referrals_per_1000": 367.38066726563824,
+        "tests_per_detected": 2.073212750932905,
+        "roc_auc": 0.8356171156943257,
+        "average_precision": 0.7487181935792914,
+        "brier": 0.15630675392746474,
+        "unweighted_confusion": {
+          "tn": 298,
+          "fp": 365,
+          "fn": 26,
+          "tp": 317
+        }
+      },
+      "hypothetical_test_every_review_case": {
+        "n": 1006,
+        "positive_n": 343,
+        "negative_n": 663,
+        "cutoff": 0.5,
+        "prevalence": 0.3661402510524164,
+        "sensitivity": 0.9930028609453958,
+        "specificity": 0.07392161837921715,
+        "ppv": 0.38247964733126155,
+        "npv": 0.9481577391092118,
+        "miss_rate_among_positive": 0.00699713905460411,
+        "referral_rate": 0.950582127282249,
+        "referrals_per_1000": 950.5821272822491,
+        "detected_per_1000": 363.578316802315,
+        "missed_per_1000": 2.5619342501014164,
+        "unnecessary_referrals_per_1000": 587.0038104799341,
+        "tests_per_detected": 2.6145182024127696,
+        "unweighted_confusion": {
+          "tn": 50,
+          "fp": 613,
+          "fn": 3,
+          "tp": 340
+        }
+      },
+      "note": "Review-all scenario assumes every flagged case receives confirmatory tests; this is a cost scenario, not an observed clinical intervention."
+    },
+    "sensitivity95": {
+      "valid_state_n": 1002,
+      "invalid_state_n": 4,
+      "review_n": 714,
+      "weighted_review_rate": 0.6898169501611945,
+      "review_reasons_unweighted": {
+        "low_distribution_concentration": 82,
+        "development_group_target_not_met": 540,
+        "insufficient_or_invalid_state": 4,
+        "limited_development_group_support": 209,
+        "near_screening_cutoff": 111,
+        "missing_inputs": 85,
+        "outside_observed_training_range": 3
+      },
+      "max_probability_difference": 1.7881393432617188e-07,
+      "screen_decision_changes_on_valid_states": 0,
+      "original_screening": {
+        "n": 1006,
+        "positive_n": 343,
+        "negative_n": 663,
+        "cutoff": 0.10138056427240372,
+        "prevalence": 0.3661402510524164,
+        "sensitivity": 0.9800051196509941,
+        "specificity": 0.18711587529518756,
+        "ppv": 0.4105137357273688,
+        "npv": 0.9418633033728762,
+        "miss_rate_among_positive": 0.019994880349005872,
+        "referral_rate": 0.8740738477505371,
+        "referrals_per_1000": 874.0738477505371,
+        "detected_per_1000": 358.8193205416684,
+        "missed_per_1000": 7.320930510748038,
+        "unnecessary_referrals_per_1000": 515.2545272088687,
+        "tests_per_detected": 2.4359720831950966,
+        "roc_auc": 0.8356171156943257,
+        "average_precision": 0.7487181935792914,
+        "brier": 0.15630675392746474,
+        "unweighted_confusion": {
+          "tn": 131,
+          "fp": 532,
+          "fn": 8,
+          "tp": 335
+        }
+      },
+      "hypothetical_test_every_review_case": {
+        "n": 1006,
+        "positive_n": 343,
+        "negative_n": 663,
+        "cutoff": 0.5,
+        "prevalence": 0.3661402510524164,
+        "sensitivity": 1.0,
+        "specificity": 0.010606968055046155,
+        "ppv": 0.3686185955544483,
+        "npv": 1.0,
+        "miss_rate_among_positive": 0.0,
+        "referral_rate": 0.9932766698915333,
+        "referrals_per_1000": 993.2766698915333,
+        "detected_per_1000": 366.1402510524164,
+        "missed_per_1000": 0.0,
+        "unnecessary_referrals_per_1000": 627.136418839117,
+        "tests_per_detected": 2.712831126969803,
+        "unweighted_confusion": {
+          "tn": 7,
+          "fp": 656,
+          "fn": 0,
+          "tp": 343
+        }
+      },
+      "note": "Review-all scenario assumes every flagged case receives confirmatory tests; this is a cost scenario, not an observed clinical intervention."
+    }
+  },
+  "test_n": 1006,
+  "latency": {
+    "one_question": {
+      "p50_ms": 0.2495,
+      "p95_ms": 0.5264449999999997,
+      "repeats": 1000
+    },
+    "seven_questions": {
+      "p50_ms": 0.2072,
+      "p95_ms": 0.402205,
+      "repeats": 1000
+    }
+  },
+  "latency_scope": "Warm CPU one thread, typed validation, one network pass, policy/review flags, JSON; loading/HTTP excluded"
+}

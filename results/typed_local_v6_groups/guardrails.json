@@ -1,0 +1,109 @@
+{
+  "confidence_floor": 0.00784713032015787,
+  "confidence_definition": "1-H(probabilities)/log(K), local definition, not vendor formula",
+  "threshold_margin": 0.02,
+  "training_ranges": {
+    "age": [
+      19.0,
+      39.0
+    ],
+    "HE_BMI": [
+      14.869606331044679,
+      46.585260754962256
+    ],
+    "HE_wc": [
+      55.5,
+      139.7
+    ],
+    "HE_ht": [
+      130.7,
+      195.0
+    ],
+    "sedentary_hours": [
+      1.0,
+      18.0
+    ],
+    "walking_days": [
+      0.0,
+      7.0
+    ]
+  },
+  "fit_roles": {
+    "ranges": "train",
+    "confidence_floor": "validation"
+  },
+  "no_individual_correctness_guarantee": true,
+  "development_group_support": {
+    "age19": {
+      "sensitivity90": {
+        "positive_n": 5,
+        "n": 19,
+        "observed_sensitivity": 0.13498565994901726,
+        "target_sensitivity": 0.9
+      },
+      "sensitivity95": {
+        "positive_n": 5,
+        "n": 19,
+        "observed_sensitivity": 0.7875260138572945,
+        "target_sensitivity": 0.95
+      }
+    },
+    "age20_29_living0": {
+      "sensitivity90": {
+        "positive_n": 52,
+        "n": 203,
+        "observed_sensitivity": 0.7932545950248655,
+        "target_sensitivity": 0.9
+      },
+      "sensitivity95": {
+        "positive_n": 52,
+        "n": 203,
+        "observed_sensitivity": 0.8847924883045861,
+        "target_sensitivity": 0.95
+      }
+    },
+    "age20_29_living1": {
+      "sensitivity90": {
+        "positive_n": 12,
+        "n": 40,
+        "observed_sensitivity": 0.8932705939092523,
+        "target_sensitivity": 0.9
+      },
+      "sensitivity95": {
+        "positive_n": 12,
+        "n": 40,
+        "observed_sensitivity": 0.8932705939092523,
+        "target_sensitivity": 0.95
+      }
+    },
+    "age30_39_living0": {
+      "sensitivity90": {
+        "positive_n": 95,
+        "n": 226,
+        "observed_sensitivity": 0.9904252749407643,
+        "target_sensitivity": 0.9
+      },
+      "sensitivity95": {
+        "positive_n": 95,
+        "n": 226,
+        "observed_sensitivity": 1.0,
+        "target_sensitivity": 0.95
+      }
+    },
+    "age30_39_living1": {
+      "sensitivity90": {
+        "positive_n": 17,
+        "n": 41,
+        "observed_sensitivity": 0.9520671879239516,
+        "target_sensitivity": 0.9
+      },
+      "sensitivity95": {
+        "positive_n": 17,
+        "n": 41,
+        "observed_sensitivity": 1.0,
+        "target_sensitivity": 0.95
+      }
+    }
+  },
+  "minimum_group_positive_n": 20
+}

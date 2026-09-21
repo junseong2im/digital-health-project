@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-21",
+  "primary_ages": [
+    "20-29",
+    "30-39"
+  ],
+  "age19": "Reported separately, not labelled twenties",
+  "exposure": "cfam=1 versus cfam=2..6; genertn consistency check; not direct independent living/self-catering",
+  "analyses": [
+    "age x household x sex weighted prevalence with full-frame PSU uncertainty",
+    "never-married (marri_1=2) sensitivity analysis",
+    "descriptive selection/retention by age and household",
+    "survey-weighted logistic association with age interaction and standardized predicted prevalence",
+    "separate screening_v5 global-cutoff group evaluation"
+  ],
+  "adjustment_A": "within-band age, sex, income quartile, education, survey year, ever-married status, employment",
+  "adjustment_B": "A plus waist circumference, current smoking, monthly drinking and aerobic activity; possible overadjustment, not causal",
+  "uncertainty": "300 full-frame stratified rescaled PSU replicates; GLM refit; no naive frequency-weight Wald p-values",
+  "inference": "Cross-sectional descriptive association. No claim that living alone protects or harms health. Multiple contrasts exploratory."
+}

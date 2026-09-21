@@ -1,0 +1,12 @@
+{
+  "state": {
+    "age": 24,
+    "sex": 1,
+    "HE_BMI": 24.0,
+    "HE_wc": 84.0,
+    "HE_ht": 175.0,
+    "living_alone": 1
+  },
+  "policy": "sensitivity95",
+  "input_set": "expanded"
+}

@@ -1,0 +1,699 @@
+{
+  "plan": {
+    "date": "2026-09-21",
+    "primary_ages": [
+      "20-29",
+      "30-39"
+    ],
+    "age19": "Reported separately, not labelled twenties",
+    "exposure": "cfam=1 versus cfam=2..6; genertn consistency check; not direct independent living/self-catering",
+    "analyses": [
+      "age x household x sex weighted prevalence with full-frame PSU uncertainty",
+      "never-married (marri_1=2) sensitivity analysis",
+      "descriptive selection/retention by age and household",
+      "survey-weighted logistic association with age interaction and standardized predicted prevalence",
+      "separate screening_v5 global-cutoff group evaluation"
+    ],
+    "adjustment_A": "within-band age, sex, income quartile, education, survey year, ever-married status, employment",
+    "adjustment_B": "A plus waist circumference, current smoking, monthly drinking and aerobic activity; possible overadjustment, not causal",
+    "uncertainty": "300 full-frame stratified rescaled PSU replicates; GLM refit; no naive frequency-weight Wald p-values",
+    "inference": "Cross-sectional descriptive association. No claim that living alone protects or harms health. Multiple contrasts exploratory."
+  },
+  "age19_n": 134,
+  "age20_39_n": 3934,
+  "descriptive": {
+    "groups": {
+      "all_19_39": {
+        "n": 4068,
+        "positive": 1472,
+        "negative": 2596,
+        "weighted_prevalence": 0.3799226528155136,
+        "unweighted_prevalence": 0.36184857423795475,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.3614105359820787,
+            0.3997935202290686
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age19": {
+        "n": 134,
+        "positive": 37,
+        "negative": 97,
+        "weighted_prevalence": 0.2550015470878767,
+        "unweighted_prevalence": 0.27611940298507465,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.1791135706939315,
+            0.3332616878864319
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age20_29": {
+        "n": 1955,
+        "positive": 587,
+        "negative": 1368,
+        "weighted_prevalence": 0.3117309808303082,
+        "unweighted_prevalence": 0.30025575447570335,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.29035402514091296,
+            0.33852265974343043
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age30_39": {
+        "n": 1979,
+        "positive": 848,
+        "negative": 1131,
+        "weighted_prevalence": 0.4591431826942887,
+        "unweighted_prevalence": 0.4284992420414351,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.43414794929013173,
+            0.481449307005722
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age20_29_living0": {
+        "n": 1582,
+        "positive": 490,
+        "negative": 1092,
+        "weighted_prevalence": 0.3192447046562483,
+        "unweighted_prevalence": 0.30973451327433627,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.29473075028430384,
+            0.3499067781587553
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age20_29_living0_sex1": {
+        "n": 696,
+        "positive": 270,
+        "negative": 426,
+        "weighted_prevalence": 0.37199621018512025,
+        "unweighted_prevalence": 0.3879310344827586,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.33495554761222907,
+            0.4111252919603875
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age20_29_living0_sex2": {
+        "n": 886,
+        "positive": 220,
+        "negative": 666,
+        "weighted_prevalence": 0.2652603155020763,
+        "unweighted_prevalence": 0.24830699774266365,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.23285149964726076,
+            0.2964493750252894
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age20_29_living1": {
+        "n": 373,
+        "positive": 97,
+        "negative": 276,
+        "weighted_prevalence": 0.2739881232231887,
+        "unweighted_prevalence": 0.26005361930294907,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.22638137720384216,
+            0.3255358358072725
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age20_29_living1_sex1": {
+        "n": 198,
+        "positive": 65,
+        "negative": 133,
+        "weighted_prevalence": 0.3400089183417645,
+        "unweighted_prevalence": 0.3282828282828283,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.27812055251997697,
+            0.41273671753829605
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age20_29_living1_sex2": {
+        "n": 175,
+        "positive": 32,
+        "negative": 143,
+        "weighted_prevalence": 0.176787523675188,
+        "unweighted_prevalence": 0.18285714285714286,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.11978899012119307,
+            0.2501862172972493
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age30_39_living0": {
+        "n": 1701,
+        "positive": 728,
+        "negative": 973,
+        "weighted_prevalence": 0.4571441502420364,
+        "unweighted_prevalence": 0.4279835390946502,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.4297958371485215,
+            0.4819159869819175
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age30_39_living0_sex1": {
+        "n": 678,
+        "positive": 402,
+        "negative": 276,
+        "weighted_prevalence": 0.6006998586961234,
+        "unweighted_prevalence": 0.5929203539823009,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.5588839243628534,
+            0.6416809037655649
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age30_39_living0_sex2": {
+        "n": 1023,
+        "positive": 326,
+        "negative": 697,
+        "weighted_prevalence": 0.32418226599182287,
+        "unweighted_prevalence": 0.31867057673509286,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.2886184736040381,
+            0.3536658598991017
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age30_39_living1": {
+        "n": 278,
+        "positive": 120,
+        "negative": 158,
+        "weighted_prevalence": 0.47090493559714114,
+        "unweighted_prevalence": 0.4316546762589928,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.41391554970886707,
+            0.5301938297866929
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age30_39_living1_sex1": {
+        "n": 162,
+        "positive": 86,
+        "negative": 76,
+        "weighted_prevalence": 0.5332018600036696,
+        "unweighted_prevalence": 0.5308641975308642,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.45735862627593393,
+            0.6148498357068264
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "age30_39_living1_sex2": {
+        "n": 116,
+        "positive": 34,
+        "negative": 82,
+        "weighted_prevalence": 0.3458100736138797,
+        "unweighted_prevalence": 0.29310344827586204,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.24723107117773574,
+            0.44330556457841913
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "never_married_age20_29_living0": {
+        "n": 1473,
+        "positive": 446,
+        "negative": 1027,
+        "weighted_prevalence": 0.31172630489468006,
+        "unweighted_prevalence": 0.3027834351663272,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.2860404143372193,
+            0.34066983679326857
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "never_married_age20_29_living1": {
+        "n": 371,
+        "positive": 96,
+        "negative": 275,
+        "weighted_prevalence": 0.27234321762290253,
+        "unweighted_prevalence": 0.2587601078167116,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.22444463291440953,
+            0.3251212528109452
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "never_married_age30_39_living0": {
+        "n": 490,
+        "positive": 216,
+        "negative": 274,
+        "weighted_prevalence": 0.477527579569424,
+        "unweighted_prevalence": 0.44081632653061226,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.4265335334625056,
+            0.5327557358657627
+          ],
+          "valid_repeats": 300
+        }
+      },
+      "never_married_age30_39_living1": {
+        "n": 250,
+        "positive": 107,
+        "negative": 143,
+        "weighted_prevalence": 0.4661003211894973,
+        "unweighted_prevalence": 0.428,
+        "low_information": false,
+        "ci95": {
+          "ci95": [
+            0.40302028331345713,
+            0.5327751707952825
+          ],
+          "valid_repeats": 300
+        }
+      }
+    },
+    "living1_minus_living0": {
+      "20_29": {
+        "point": -0.045256581433059606,
+        "ci95": [
+          -0.10636746938412038,
+          0.012534920053687936
+        ],
+        "valid_repeats": 300
+      },
+      "30_39": {
+        "point": 0.013760785355104721,
+        "ci95": [
+          -0.04560000529248108,
+          0.08322728336946782
+        ],
+        "valid_repeats": 300
+      }
+    },
+    "survey_design": {
+      "full_frame_psus": 768,
+      "domain_psus": 699,
+      "strata": 108,
+      "singleton_strata": 0,
+      "method": "n_h-1 draws with replacement; multiplicity*n_h/(n_h-1); full survey PSUs; no FPC"
+    }
+  },
+  "selection_audit": {
+    "all_20_39": {
+      "all_survey_young": 5171,
+      "pre_exam_eligible": 4793,
+      "included": 3934,
+      "not_included_after_exam_filters": 859,
+      "retention_unweighted": 0.8207803046108909
+    },
+    "age20_29": {
+      "all_survey_young": 2495,
+      "pre_exam_eligible": 2390,
+      "included": 1955,
+      "not_included_after_exam_filters": 435,
+      "retention_unweighted": 0.8179916317991632
+    },
+    "age30_39": {
+      "all_survey_young": 2676,
+      "pre_exam_eligible": 2403,
+      "included": 1979,
+      "not_included_after_exam_filters": 424,
+      "retention_unweighted": 0.8235538909696213
+    },
+    "age20_29_living0": {
+      "all_survey_young": 2054,
+      "pre_exam_eligible": 1955,
+      "included": 1582,
+      "not_included_after_exam_filters": 373,
+      "retention_unweighted": 0.8092071611253197
+    },
+    "age20_29_living1": {
+      "all_survey_young": 441,
+      "pre_exam_eligible": 435,
+      "included": 373,
+      "not_included_after_exam_filters": 62,
+      "retention_unweighted": 0.8574712643678161
+    },
+    "age30_39_living0": {
+      "all_survey_young": 2314,
+      "pre_exam_eligible": 2069,
+      "included": 1701,
+      "not_included_after_exam_filters": 368,
+      "retention_unweighted": 0.8221362977283712
+    },
+    "age30_39_living1": {
+      "all_survey_young": 361,
+      "pre_exam_eligible": 334,
+      "included": 278,
+      "not_included_after_exam_filters": 56,
+      "retention_unweighted": 0.8323353293413174
+    }
+  },
+  "adjusted": {
+    "models": {
+      "demographic": {
+        "formula": "target ~ living_alone * age30 + age_within_band + C(sex) + C(incm) + C(edu) + C(survey_year) + ever_married + employed",
+        "n": 3718,
+        "point": {
+          "20_29": {
+            "predicted_multi": 0.32615536648099147,
+            "predicted_single": 0.24048146266360504,
+            "difference": -0.08567390381738643,
+            "ratio": 0.7373218023613922
+          },
+          "30_39": {
+            "predicted_multi": 0.4679375968071476,
+            "predicted_single": 0.43146080011015886,
+            "difference": -0.03647679669698872,
+            "ratio": 0.9220477325483594
+          },
+          "difference_interaction": 0.04919710712039771
+        },
+        "coef_names": [
+          "Intercept",
+          "C(sex)[T.2.0]",
+          "C(incm)[T.2.0]",
+          "C(incm)[T.3.0]",
+          "C(incm)[T.4.0]",
+          "C(edu)[T.2.0]",
+          "C(edu)[T.3.0]",
+          "C(edu)[T.4.0]",
+          "C(survey_year)[T.2022]",
+          "C(survey_year)[T.2023]",
+          "C(survey_year)[T.2024]",
+          "living_alone",
+          "age30",
+          "living_alone:age30",
+          "age_within_band",
+          "ever_married",
+          "employed"
+        ],
+        "coefficients": [
+          -0.3034200907978771,
+          -0.8491005652965478,
+          -0.11408028072749656,
+          -0.21932111295213316,
+          -0.396518933226759,
+          0.645489400858507,
+          0.0009010882350216779,
+          -0.28894061403388493,
+          -0.1059173706257762,
+          -0.18450884530206282,
+          -0.18451173641005977,
+          -0.4472195548484932,
+          0.7946464466087683,
+          0.2894285554875066,
+          0.07705613560917005,
+          -0.07920338019209441,
+          -0.009440063098437574
+        ],
+        "ci95": {
+          "20_29": {
+            "predicted_multi": {
+              "ci95": [
+                0.29985779019927483,
+                0.35412731539681114
+              ],
+              "valid_repeats": 300
+            },
+            "predicted_single": {
+              "ci95": [
+                0.18709898115206283,
+                0.2898571139024272
+              ],
+              "valid_repeats": 300
+            },
+            "difference": {
+              "ci95": [
+                -0.14832899849766487,
+                -0.02921242565251067
+              ],
+              "valid_repeats": 300
+            },
+            "ratio": {
+              "ci95": [
+                0.5586024771073629,
+                0.9073232259561268
+              ],
+              "valid_repeats": 300
+            }
+          },
+          "30_39": {
+            "predicted_multi": {
+              "ci95": [
+                0.44186730637948307,
+                0.4950768215980977
+              ],
+              "valid_repeats": 300
+            },
+            "predicted_single": {
+              "ci95": [
+                0.35984160761291195,
+                0.49125532563636276
+              ],
+              "valid_repeats": 300
+            },
+            "difference": {
+              "ci95": [
+                -0.10939186817213142,
+                0.02977209997703566
+              ],
+              "valid_repeats": 300
+            },
+            "ratio": {
+              "ci95": [
+                0.7695776902612305,
+                1.062447113874388
+              ],
+              "valid_repeats": 300
+            }
+          }
+        },
+        "difference_interaction_ci95": {
+          "ci95": [
+            -0.049738723646261744,
+            0.14077577378360304
+          ],
+          "valid_repeats": 300
+        },
+        "failed_replicates": 0
+      },
+      "behavior_waist": {
+        "formula": "target ~ living_alone * age30 + age_within_band + C(sex) + C(incm) + C(edu) + C(survey_year) + ever_married + employed + HE_wc + sm_presnt + dr_month + pa_aerobic",
+        "n": 3718,
+        "point": {
+          "20_29": {
+            "predicted_multi": 0.32345070306275003,
+            "predicted_single": 0.2487558401503007,
+            "difference": -0.07469486291244934,
+            "ratio": 0.7690687879013254
+          },
+          "30_39": {
+            "predicted_multi": 0.46415026861346836,
+            "predicted_single": 0.453286727493748,
+            "difference": -0.010863541119720377,
+            "ratio": 0.9765947757561954
+          },
+          "difference_interaction": 0.06383132179272896
+        },
+        "coef_names": [
+          "Intercept",
+          "C(sex)[T.2.0]",
+          "C(incm)[T.2.0]",
+          "C(incm)[T.3.0]",
+          "C(incm)[T.4.0]",
+          "C(edu)[T.2.0]",
+          "C(edu)[T.3.0]",
+          "C(edu)[T.4.0]",
+          "C(survey_year)[T.2022]",
+          "C(survey_year)[T.2023]",
+          "C(survey_year)[T.2024]",
+          "living_alone",
+          "age30",
+          "living_alone:age30",
+          "age_within_band",
+          "ever_married",
+          "employed",
+          "HE_wc",
+          "sm_presnt",
+          "dr_month",
+          "pa_aerobic"
+        ],
+        "coefficients": [
+          -10.092837084574853,
+          0.2674899941414844,
+          -0.1656302287548204,
+          -0.15796001620869526,
+          -0.2720135554297647,
+          1.5381374046854013,
+          0.9703942526355738,
+          0.7471272789746208,
+          -0.11849668731549463,
+          -0.2601237816837654,
+          -0.2004036517583383,
+          -0.4842885023478501,
+          0.5849459785793854,
+          0.42705431781621767,
+          0.05910972127601686,
+          -0.10628612006269966,
+          -0.008046662145930193,
+          0.10368597566578548,
+          0.332175506588322,
+          -0.20253684891639506,
+          0.06432386153997832
+        ],
+        "ci95": {
+          "20_29": {
+            "predicted_multi": {
+              "ci95": [
+                0.2962833130897602,
+                0.3511698364378943
+              ],
+              "valid_repeats": 300
+            },
+            "predicted_single": {
+              "ci95": [
+                0.2042371091934474,
+                0.2942942190338694
+              ],
+              "valid_repeats": 300
+            },
+            "difference": {
+              "ci95": [
+                -0.128356845056757,
+                -0.020035269721936196
+              ],
+              "valid_repeats": 300
+            },
+            "ratio": {
+              "ci95": [
+                0.619549816725603,
+                0.9347113818363593
+              ],
+              "valid_repeats": 300
+            }
+          },
+          "30_39": {
+            "predicted_multi": {
+              "ci95": [
+                0.4372673949428069,
+                0.4903227458194395
+              ],
+              "valid_repeats": 300
+            },
+            "predicted_single": {
+              "ci95": [
+                0.38575397215944035,
+                0.5134438763859539
+              ],
+              "valid_repeats": 300
+            },
+            "difference": {
+              "ci95": [
+                -0.07890796413286529,
+                0.049007910318754545
+              ],
+              "valid_repeats": 300
+            },
+            "ratio": {
+              "ci95": [
+                0.8321887095562458,
+                1.1044173529902486
+              ],
+              "valid_repeats": 300
+            }
+          }
+        },
+        "difference_interaction_ci95": {
+          "ci95": [
+            -0.015477786573850946,
+            0.14120918207460936
+          ],
+          "valid_repeats": 300
+        },
+        "failed_replicates": 0
+      }
+    },
+    "design": {
+      "full_frame_psus": 768,
+      "domain_psus": 681,
+      "strata": 108,
+      "singleton_strata": 0,
+      "method": "n_h-1 draws with replacement; multiplicity*n_h/(n_h-1); full survey PSUs; no FPC"
+    },
+    "interpretation": "Survey-weighted observational standardization, not a causal effect or a population-wide estimate beyond this selected complete-case cohort."
+  },
+  "source_hashes": {
+    "metabolic\\api.py": "26f949acdff8bf4893f75f09a2e8b3a4dd40f9f1055c7abede50e990bbce762c",
+    "metabolic\\comparison.py": "9770546ed5eb6c8d2d225f4c771a42c4bb55f35c6d3f25121c7fd8acaba237a0",
+    "metabolic\\data.py": "be69e4cc340f827ba42b379aab7643427bd0c1264007edb8adaf430680a7263a",
+    "metabolic\\decisions.py": "8f872867183b3e5f95afaa4336bb1cfdb5c9e50b3f86f1da8482681d1dd70db4",
+    "metabolic\\expanded.py": "cfea90444dc11f26299db140ab8f02f7ffe69dc5b94a2df73aacde90607ea145",
+    "metabolic\\fast.py": "764da709ff870c041c473d264597534a9ae2e80156b2d28a6daa4a7cb4442d5f",
+    "metabolic\\household.py": "ab7795ebe2559ebf9ff44eb96df60817d0c2bd539fefb08221b4894e89225e65",
+    "metabolic\\household_followup.py": "242b391051b5e58f1279315db3e272062dbba8b751ba757899cc9659bde08ed4",
+    "metabolic\\network.py": "395562c5d91c08f3c8a0fd17a90194bba5c86616b5884762d8d05801ea1d3f0b",
+    "metabolic\\optimize.py": "fd6f3b8730822fc5685fbbd2307dfa829dff9f3885221ab682a2a85431074cc4",
+    "metabolic\\predict.py": "c32403c63b508e326160a8c640224f91e60cf074a230bfc1aaba8b01907babb8",
+    "metabolic\\refined.py": "ca3efec87c342fca70603556abc2414929a0a1f8bf0259f9d77701fbf002f9be",
+    "metabolic\\screening.py": "0366d33e2d5a103ddc7de91b3fba3175a2a712d1e7a6bb72fb86349581d1860e",
+    "metabolic\\specialized.py": "33c7abecad4da604cb46ea83e6159a533d4ab22d394744a897fd493d4596229d",
+    "metabolic\\train.py": "8c10995927aab95177e2e246a64a6ea6ea001414d347549b094a5efd8e091dd2",
+    "metabolic\\train_factorial.py": "aff444163e22628d984a269bc24ac1a608ba7bafe5b803fba8f37b1afca87a80",
+    "metabolic\\train_screening.py": "58c3825e82102ce145d21b5b5be21c407bc5d28eae9b4b5f37179b1646c17cd3",
+    "metabolic\\train_specialized.py": "bef018ef92173bff08cba085de0b59d8c446a285aaf0ca390cb113d64936e819",
+    "metabolic\\__init__.py": "1fa8b88d98da402c975ec79cfba98c072c44b86df17aa80686f1bf5a5e416e40"
+  }
+}
